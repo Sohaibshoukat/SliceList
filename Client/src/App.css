@@ -45,3 +45,44 @@
   }
 }
 
+
+/* styles.css */
+
+.toggle-button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.monthly-active {
+  background-color: white;
+  color: black;
+}
+
+.yearly-active {
+  left: 100%;
+  background-color: black;
+  color: white;
+}
+
+.monthly-text,
+.yearly-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.monthly-text {
+  transform: translateX(0);
+}
+
+.yearly-text {
+  transform: translateX(-100%);
+}
