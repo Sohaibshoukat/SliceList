@@ -5,7 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      textColor:{
+        primary:"black",
+        secondary:"White",
+        accence:"#ADFC32",
+        darkgray:"#C6C3C3"
+      },
+      backgroundColor:{
+        primary:"black",
+        secondary:"White",
+        accence:"#ADFC32",
+        darkgray:"#C6C3C3"
+      },
+    },
   },
   plugins: [],
 }
