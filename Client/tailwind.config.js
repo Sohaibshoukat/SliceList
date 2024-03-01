@@ -9,7 +9,7 @@ export default {
       textColor:{
         primary:"black",
         secondary:"White",
-        accence:"#ADFC32",
+        accence:"#ADFC32",  //green
         darkgray:"#C6C3C3"
       },
       backgroundColor:{
@@ -18,8 +18,14 @@ export default {
         accence:"#ADFC32",
         darkgray:"#C6C3C3"
       },
+      fontFamily:{
+        Heading: '"Inter", sans-serif',
+        para: '"Poppins", sans-serif'
+    }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }
 
