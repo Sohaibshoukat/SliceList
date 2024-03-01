@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< Updated upstream
 /* Add this to your component's CSS or global styles */
 ::-webkit-scrollbar {
     width: 12px; /* Set the width of the scrollbar */
@@ -20,3 +21,18 @@
   }
   
   
+=======
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+}
+
+:root{
+    overflow-x: hidden;
+}
+>>>>>>> Stashed changes

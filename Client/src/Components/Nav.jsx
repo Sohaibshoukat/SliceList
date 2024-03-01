@@ -13,7 +13,12 @@ const Nav = () => {
         <>
             <div className="bg-primary shadow-xl flex flex-row justify-between items-center py-4 md:py-6 px-6 md:px-14">
                 <div className='md:basis-[25%]'>
-                    <Link to={"/"}>
+                    <Link to={"/"} onClick={() => {
+                            setDisplay(true);
+                            setTimeout(() => {
+                                setDisplay(false)
+                            }, 50);
+                        }}>
                         <img src={logo} alt="" className='w-[150px] md:w-[200px] h-[auto]' />
                     </Link>
                 </div>
@@ -25,7 +30,7 @@ const Nav = () => {
                                 setDisplay(false)
                             }, 50);
                         }}>
-                            <h1 className={`text-white font-extrabold text-lg py-2 px-4 hover:bg-accence hover:text-primary ease-in-out duration-300 rounded-lg ${window.location.pathname == item.Link && "bg-accence text-primary"}`}>{item.Name}</h1>
+                            <h1 className={`font-extrabold text-lg py-2 px-4 hover:bg-accence hover:text-primary ease-in-out duration-300 rounded-lg ${window.location.pathname === item.Link ? "bg-accence text-primary":"text-white"}`}>{item.Name}</h1>
                         </Link>
                     ))}
                 </div>
@@ -42,7 +47,7 @@ const Nav = () => {
                     <IoMdMenu className='text-3xl text-white font-extrabold' onClick={() => { setMobileMenu(true) }} />
                 </div>
             </div>
-            <div className={`${MobileMenu ? 'block RightOpenanimation' : 'hidden'} fixed xl:hidden top-0 bottom-0 left-0 right-0`}>
+            <div className={`${MobileMenu ? 'block RightOpenanimation' : 'hidden'} fixed z-50 xl:hidden top-0 bottom-0 left-0 right-0`}>
                 <div className="bg-black/40 z-0 absolute left-0 top-0 right-0 bottom-0" onClick={() => { setMobileMenu(false) }}></div>
                 <div className='z-10 relative bg-black w-[70%] md:w-[50%] h-[100%] py-4 px-6 md:py-6 md:px-8'>
                     <IoClose className='absolute top-[0.75rem] md:top-[1.5rem] right-[15px] text-white text-4xl font-extrabold' onClick={() => { setMobileMenu(false) }} />
