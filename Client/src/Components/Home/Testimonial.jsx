@@ -42,7 +42,7 @@ const Testimonial = () => {
                     </div>
                 ))}
             </div>
-            <div className='md:hidden my-10 mb-20 m-auto'>
+            <div className='md:hidden mt-10 mb-5 m-auto'>
                 <Swiper
                     spaceBetween={30}
                     // pagination={{
@@ -78,8 +78,8 @@ const Testimonial = () => {
                     ))}
                 </Swiper>
             </div>
-            <div className='flex flex-col justify-center items-center py-8 md:py-16'>
-                <button className='bg-black text-white font-Para rounded-lg px-4 py-2 text-xl font-semibold text-center hover:bg-accence hover:text-black duration-300 ease-in-out'>star gathering zero party data</button>
+            <div className='flex flex-col justify-center items-center py-4 md:py-16'>
+                <button className='bg-black text-white font-Para rounded-lg px-4 py-2 text-xl font-semibold text-center hover:bg-accence hover:text-black duration-300 ease-in-out'>Start gathering zero party data</button>
             </div>
         </div>
     )

@@ -1,25 +1,25 @@
 import React from 'react'
-import {cardsData} from '../../Data/HowTo/HowToPageCardData'
+import { cardsData } from '../../Data/HowToPageCardData'
 import Card from './Card'
 
 const IntegrationCards = () => {
   return (
     <>
-        {/* Heading 2 */}
-      <div className='  py-14 px-14 flex flex-row  items-center justify-center gap-2'>
-        <h1 className='text-primary font-Heading text-2xl sm:text-3xl font-extrabold md:text-5xl uppercase text-center'>integration </h1>
-        <h1 className='text-accence md:text-primary font-Heading text-2xl sm:text-3xl font-extrabold md:text-5xl uppercase text-center'> guides</h1>
-      </div>
+      {/* Heading 2 */}
+      <div className='  pt-20 pb-0 md:py-28 flex flex-col items-center justify-center gap-10 md:gap-20 w-[90%] md:w-[90%] xl:w-[80%] m-auto'>
+        <h1 className='text-primary font-head text-4xl font-extrabold md:text-5xl uppercase text-center'>integration guides</h1>
 
-      {/* Cards */}
-      <div className='pb-24'>
-        <div className='grid grid-cols-2 lg:grid-cols-3  px-14 gap-3 md:gap-14 lg:px-36 '>
-          {cardsData.map((card, index) => (
-            <Card key={index} cardData={card}/>
-          ))}
+        {/* Cards */}
+        <div className='pb-24'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {cardsData.map((card, index) => (
+              <Card key={index} cardData={card} />
+            ))}
+          </div>
+
         </div>
-
       </div>
+
     </>
   )
 }
