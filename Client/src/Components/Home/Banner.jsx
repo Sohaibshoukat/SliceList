@@ -28,7 +28,7 @@ const Banner = () => {
                 <img src={BgBall} alt="" className='absolute -z-10 -bottom-[50%] -left-[10%] w-[250px] md:w-[300px] lg:w-auto' />
                 <img src={BgBall} alt="" className='rotate-180 absolute -z-10 -top-[60%] -right-[10%] w-[250px]  md:w-[300px] lg:w-auto' />
                 <div className="flex flex-col justify-center items-center w-[95%] md:w-[90%] xl:w-[80%] m-auto text-center h-[100%] FadeIn">
-                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-Heading leading-[2rem] md:leading-[4rem] mb-6 xl:mb-8'>Grow Your Email Marketing Performance <br /> with  Laser-Targeted Insights</h1>
+                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-head leading-[2rem] md:leading-[4rem] mb-6 xl:mb-8'>Grow Your Email Marketing Performance <br /> with  Laser-Targeted Insights</h1>
                     <p className='text-lg md:text-xl xl:text-2xl font-light md:max-w-[80%] xl:max-w-[60%] font-Para mb-10 lg:mb-16'>Generate Questionnaires, and more by enhancing your marketing emails with compelling customization.</p>
                     <div className='flex flex-row justify-center gap-2 md:gap-8 text-base md:text-xl font-Para'>
                         <button className='bg-black text-white font-Para px-2 py-2 md:px-6 rounded-xl hover:bg-accence hover:text-black duration-300 ease-in-out'>Start Your Free Trial</button>
@@ -41,6 +41,7 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
+
             <div className="w-[98%] md:w-[90%] xl:w-[80%] m-auto relative overflow-hidden">
                 <div ref={whyUsRef} className={`flex justify-center items-center my-4 md:my-8 relative ${isVisible && 'FadeIn'} `}>
                     <img src={BannerImage} alt="" />

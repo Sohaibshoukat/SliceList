@@ -45,12 +45,12 @@ const Brand = () => {
 
     return (
         <div className='bg-primary w-[100vw] py-10 md:py-20'>
-            <div className='w-[95%] md:w-[90%] xl:w-[85%] m-auto'>
+            <div className='w-[100%] md:w-[90%] xl:w-[85%] m-auto'>
                 <div className='flex flex-col md:flex-row justify-between gap-y-16 gap-x-6 items-center'>
                     <div className='xl:basis-[45%] md:basis-[50%] md:w-[50%]'>
-                        <h2 className='text-white font-bold text-2xl  md:text-3xl text-center md:text-left'>2000+ brands using our website for proffesional Mailling</h2>
+                        <h2 className='text-white font-bold text-2xl  md:text-3xl lg:text-4xl text-center md:text-left font-head'>2000+ brands using our website for proffesional Mailling</h2>
                     </div>
-                    <div className='xl:basis-[50%] md:basis-[50%] md:w-[50%] w-[90%]'>
+                    <div className='xl:basis-[50%] md:basis-[50%] md:w-[50%] w-[100%]'>
                         <div className=' flex flex-col gap-y-8'>
                         <Marquee direction="right" speed={100} gradientWidth={500}>
                             {BrandData.map((item, index) => (
