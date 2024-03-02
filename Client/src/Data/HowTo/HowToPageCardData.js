@@ -1,4 +1,4 @@
-import img from "../assets/Logo/00.png"
+import img from "../../assets/Logo/00.png"
 export const cardsData = [
     {
       title: 'Mailchimp',
