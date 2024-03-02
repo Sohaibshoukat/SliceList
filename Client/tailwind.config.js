@@ -21,7 +21,8 @@ export default {
       fontFamily:{
         Heading:'"Inter", sans-serif',
         Para:'"Poppins", sans-serif',
-        indexs:"Limelight"
+        indexs:"Limelight",
+        head:'"Bebas Neue", sans-serif'
       }
     },
   },
