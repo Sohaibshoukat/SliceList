@@ -19,15 +19,10 @@ export default {
         darkgray:"#C6C3C3"
       },
       fontFamily:{
-<<<<<<< Updated upstream
-        Heading: '"Inter", sans-serif',
-        para: '"Poppins", sans-serif'
-    }
-=======
         Heading:'"Inter", sans-serif',
-        Para:'"Poppins", sans-serif'
+        Para:'"Poppins", sans-serif',
+        indexs:"Limelight"
       }
->>>>>>> Stashed changes
     },
   },
   plugins: [

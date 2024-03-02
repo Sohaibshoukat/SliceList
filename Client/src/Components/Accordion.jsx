@@ -1,42 +1,45 @@
 import React, { useState } from 'react';
-import { accordionItems } from "../Data/AccordionData";
+import { faq } from "../Data/FAQ";
+import { FaMinus, FaPlus } from 'react-icons/fa';
 
 const Accordion = () => {
-  const [activeAccordion, setActiveAccordion] = useState(1);
 
-  const toggleAccordion = (index) => {
-    setActiveAccordion((prevIndex) => (index === prevIndex ? null : index));
-  };
+  const [currenttab, setcurrenttab] = useState(null)
+
 
   return (
-    <div className="h-96 overflow-y-auto px-6     ">      
-    {accordionItems.map((item, index) => (
-        <div key={index + 1} className="mb-4 shadow-md">
-          <h2 id={`accordion-color-heading-${index + 1}`}>
-            <button
-              type="button"
-              className={`flex items-center justify-between w-full p-5 font-medium rtl:text-right text-primary border ${index === accordionItems.length - 1 ? 'border-t-0' : 'border-b-0'
-                } rounded-lg border-primary dark:border-primary dark:tprimary   dark:hover:bg-primary hover:text-accence focus:text-accence focus:bg-primary gap-3`}
-              data-accordion-target={`#accordion-color-body-${index + 1}`}
-              aria-expanded={activeAccordion === index + 1}
-              aria-controls={`accordion-color-body-${index + 1}`}
-              onClick={() => toggleAccordion(index + 1)}
-            >
-              <span className="font-black text-4xl font-Heading dark:hover:bg-primary hover:text-accence focus:text-accence focus:bg-primary">{index + 1}</span>
-              <span className='text-xl font-Heading'>{item.heading}</span>
-              <span className="text-4xl font-black">{activeAccordion === index + 1 ? '-' : '+'}</span>
-            </button>
-
-            <div
-              id={`accordion-color-body-${index + 1}`}
-              className={`${activeAccordion === index + 1 ? 'block' : 'hidden'
-                } p-5 border border-${index === 0 ? 't-0' : 'b-0'} border-primary rounded-lg dark:border-primary dark:bg-primary`}
-              aria-labelledby={`accordion-color-heading-${index + 1}`}
-            >
-              <div className="mb-2 text-white dark:text-white">{item.content}</div>
-              {item.additionalContent && <>{item.additionalContent}</>}
+    <div className="h-96 overflow-y-auto flex flex-col gap-y-4 px-3 md:px-6 py-4">
+      {faq.map((item, index) => (
+        <div
+          className={`
+             flex flex-col gap-5 ${currenttab==index?'bg-black text-accence' :'bg-white text-black'}
+             py-4 px-4 md:py-4 md:px-8 lg:py-6 lg:px-8 rounded-lg cursor-pointer 
+             ease-in-out duration-300
+          `}
+          style={{boxShadow: "1px 1px 23.799999237060547px -3px #00000040"}}
+          key={index}
+        >
+          <div
+            className={`text-left flex flex-row  justify-between items-center text-base md:text-xl xl:text-2xl font-semibold`}
+            onClick={() => {
+              if (currenttab === index) {
+                setcurrenttab(null);
+              } else {
+                setcurrenttab(index);
+              }
+            }}
+          >
+            <div className='flex gap-x-4 items-center'>
+              <h1 className='font-indexs text-3xl font-bold'>{index + 1}</h1>
+              <h2 className='font-Heading text-2xl font-normal'>{item.heading}</h2>
             </div>
-          </h2>
+            {currenttab !== index ? <FaPlus /> : <FaMinus />}
+          </div>
+          <div className={`${currenttab !== index ? 'hidden':'block'} text-base md:text-xl text-white text-justify font-normal lg:pt-2 xl:pt-4 px-2 md:px-4 ease-in-out duration-300`}>
+            {currenttab === index && <p>
+              {item.content}
+            </p>}
+          </div>
         </div>
       ))}
     </div>

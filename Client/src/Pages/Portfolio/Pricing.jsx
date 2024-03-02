@@ -1,45 +1,27 @@
 import React from 'react'
-import ToggleButton from '../../Components/ToggleButton'
-import Card from '../../Components/Card'
-import Accordion from '../../Components/Accordion'
-import GreenCard from '../../Components/GreenCard'
+
+import Plans from '../../Components/Pricing/Plans'
+import FAQ from '../../Components/Pricing/FAQ'
+
+import BgBall from "../../assets/Images/image.png"
+
 
 const Pricing = () => {
   return (
     <>
-      
-      {/* Heading and Toggle  */}
-      <div className='flex flex-row items-center justify-center h-96'>
-        <div className='flex flex-col gap-8 items-center justify-center w-[50%]'>
-          <h1 className='text-primary font-Heading text-4xl'>Leap from Free to Phenomenal: Grow with Us!</h1>
-          <ToggleButton />
+      <div className='flex flex-row items-center justify-center py-20 md:py-32 relative'>
+        <img src={BgBall} alt="" className='absolute -z-10 -bottom-[90%] xl:-bottom-[80%] -left-[10%] w-[250px] md:w-[300px] lg:w-auto' />
+        <img src={BgBall} alt="" className='rotate-180 absolute -z-10 -top-[60%] -right-[10%] w-[250px]  md:w-[300px] lg:w-auto' />
+
+        <div className='flex flex-col gap-4 md:gap-8 items-center justify-center w-[90%] md:w-auto'>
+          <h1 className='text-primary font-Heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-center'>Leap from Free to Phenomenal: <br className='hidden md:block' /> Grow with Us!</h1>
+          <p className='text-lg md:text-xl text-center xl:text-2xl font-light md:max-w-[80%] xl:max-w-[60%] font-Para'>No credit card required. Cancel any time. All taxes included. </p>
         </div>
       </div>
 
-      {/* Card Component */}
-      <div className='flex flex-col pb-20 px-8 justify-center items-center gap-10 lg:flex-row'>
-        <Card heading={"BASIC"} price={"$0"} buttonText={"Sign up, it's free"} />
-        <Card heading={"PRO"} price={"$19.99"} buttonText={"Buy Now"} />
-        <GreenCard heading={"ADVANCED"} price={"$39.99"} buttonText={"Buy Now"} />
-      </div>
+      <Plans />
 
-      {/* Heading 2 */}
-      <div className='flex  p-14 items-center justify-center '>
-        <h1 className='text-primary font-Heading text-5xl'>FREQUENTLY ASKED QUESTIONS </h1>
-      </div>
-
-      {/* Accordion and Video */}
-      <div className='grid grid-cols-1 gap-24 lg:grid-cols-2 p-10 md:px-28  mb-44 '>
-        <div className=''>
-          <Accordion />
-        </div>
-        <div className=''>
-          <video class="w-full rounded-lg" autoplay controls>
-            <source src="/docs/videos/flowbite.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
+      <FAQ />
     </>
   )
 }

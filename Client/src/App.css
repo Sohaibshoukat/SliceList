@@ -63,9 +63,6 @@
   }
 }
 
-<<<<<<< Updated upstream
-
-/* styles.css */
 
 .toggle-button {
   cursor: pointer;
@@ -104,7 +101,8 @@
 
 .yearly-text {
   transform: translateX(-100%);
-=======
+}
+
 .FadeIn {
   animation: fade 2s ease;
 }
@@ -133,5 +131,84 @@
   top: -10px;
   left: 10px;
   z-index: -1;
->>>>>>> Stashed changes
+}
+
+
+.bounceleft{
+  animation: bouncele 0.5s ease;
+}
+
+
+@keyframes bouncele {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.bounceright{
+  animation: bounceri 0.5s ease;
+}
+
+
+@keyframes bounceri {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+
+/* Styling for Slider */
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.slider {
+	height: 110px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.slider .slide-track {
+	-webkit-animation: scroll 30s linear infinite;
+	animation: scroll 30s linear infinite;
+	display: flex;
+}
+
+.slider .slide {
+  width: 200px;
+}
+
+.slider .slide img {
+    width: 80%;
+	height: 100px;
+	border-radius: 10px;
+}
+
+@-webkit-keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-250px * 7));
+	}
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-250px * 7));
+	}
 }
