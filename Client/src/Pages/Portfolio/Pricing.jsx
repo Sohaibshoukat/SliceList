@@ -11,7 +11,7 @@ const Pricing = () => {
       {/* Heading and Toggle  */}
       <div className='flex flex-row items-center justify-center h-96'>
         <div className='flex flex-col gap-8 items-center justify-center w-[50%]'>
-          <h1 className='text-primary font-Heading text-4xl'>Leap from Free to Phenomenal: Grow with Us!</h1>
+          <h1 className='text-primary font-Heading text-4xl text-center'>Leap from Free to Phenomenal: Grow with Us!</h1>
           <ToggleButton />
         </div>
       </div>
