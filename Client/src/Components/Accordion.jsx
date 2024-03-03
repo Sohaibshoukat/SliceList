@@ -30,8 +30,8 @@ const Accordion = () => {
             }}
           >
             <div className='flex gap-x-4 items-center'>
-              <h1 className='font-indexs text-3xl font-bold'>{index + 1}</h1>
-              <h2 className='font-Heading text-2xl font-normal'>{item.heading}</h2>
+              <h1 className='font-indexs text-2xl md:text-3xl font-bold'>{index + 1}</h1>
+              <h2 className='font-Heading text-lg md:text-2xl font-normal'>{item.heading}</h2>
             </div>
             {currenttab !== index ? <FaPlus /> : <FaMinus />}
           </div>

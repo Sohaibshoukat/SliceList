@@ -1,4 +1,4 @@
-import img from "../../assets/Logo/00.png"
+import img from "../assets/Logo/00.png"
 export const cardsData = [
     {
       title: 'Mailchimp',
@@ -7,25 +7,25 @@ export const cardsData = [
     },
   
     {
-      title: 'Mailchimp',
+      title: 'drip',
       description: 'Lorem ipsum dolor sit amet consectetur. Imperdiet nisi quam hendrerit sapien. Volutpat nullam ',
       image: img,
     },
   
     {
-      title: 'Mailchimp',
+      title: 'sendin blue',
       description: 'Lorem ipsum dolor sit amet consectetur. Imperdiet nisi quam hendrerit sapien. Volutpat nullam ',
       image: img,
     },
   
     {
-      title: 'Mailchimp',
+      title: 'drip',
       description: 'Lorem ipsum dolor sit amet consectetur. Imperdiet nisi quam hendrerit sapien. Volutpat nullam ',
       image: img,
     },
   
     {
-      title: 'Mailchimp',
+      title: 'sendin blue',
       description: 'Lorem ipsum dolor sit amet consectetur. Imperdiet nisi quam hendrerit sapien. Volutpat nullam ',
       image: img,
     },

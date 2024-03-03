@@ -52,16 +52,16 @@ const Brand = () => {
                     </div>
                     <div className='xl:basis-[50%] md:basis-[50%] md:w-[50%] w-[100%]'>
                         <div className=' flex flex-col gap-y-8'>
-                        <Marquee direction="right" speed={100} gradientWidth={500}>
+                        <Marquee direction="right" speed={50} gradientWidth={500}>
                             {BrandData.map((item, index) => (
-                                <div className='w-[100px] md:w-[150px] mx-6'>
+                                <div className='w-[100px] md:w-[150px] mx-6' key={index}>
                                     <img src={item.Image} />
                                 </div>
                             ))}
                         </Marquee>
-                        <Marquee direction="left" speed={100}>
+                        <Marquee direction="left" speed={50}>
                             {BrandData.map((item, index) => (
-                                <div className='w-[100px] md:w-[150px] mx-6'>
+                                <div className='w-[100px] md:w-[150px] mx-6' key={index}>
                                     <img src={item.Image} />
                                 </div>
                             ))}

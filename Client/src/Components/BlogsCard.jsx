@@ -5,7 +5,7 @@ const BlogsCard = ({ item }) => {
         <div className='flex flex-col bg-white'
         style={{boxShadow: "1px 1px 7.099999904632568px 0px #00000040"}}>
             <div className='basis-[55%]'>
-                <img src={item.Image} alt="" />
+                <img src={item.Image} alt="" className='w-[100%]' />
             </div>
             <div className='basis-[40%] py-4 px-8'>
                 <h3 className='font-Para text-xl font-light mb-4'>{item.Date}</h3>
