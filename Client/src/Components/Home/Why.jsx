@@ -19,7 +19,7 @@ const Why = () => {
                                             </div>
                                             <div className='flex text-left flex-col gap-y-2 md:basis-[50%]'>
                                                 <h1 className='text-4xl tracking-wide font-bold font-head'>{item.Heading}</h1>
-                                                <p className='text-xl font-normal mb-4 font-Para'>{item.Para}</p>
+                                                <p className='text-xl font-normal mb-4 font-Para text-justify'>{item.Para}</p>
                                                 <div className='flex flex-col gap-4'>
                                                     {item.Feature.map((item2, index2) => (
                                                         <div className='' key={index2}>
@@ -33,7 +33,7 @@ const Why = () => {
                                         <>
                                             <div className='flex text-left flex-col gap-y-2 md:basis-[50%]'>
                                                 <h1 className='text-4xl tracking-wide font-bold font-head'>{item.Heading}</h1>
-                                                <p className='text-xl font-normal mb-4 font-Para'>{item.Para}</p>
+                                                <p className='text-xl font-normal mb-4 font-Para text-justify'>{item.Para}</p>
                                                 <div className='flex flex-col gap-4'>
                                                     {item.Feature.map((item2, index2) => (
                                                         <div className='' key={index2}>

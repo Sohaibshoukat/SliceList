@@ -31,11 +31,11 @@ const Accordion = () => {
           >
             <div className='flex gap-x-4 items-center'>
               <h1 className='font-indexs text-2xl md:text-3xl font-bold'>{index + 1}</h1>
-              <h2 className='font-Heading text-lg md:text-2xl font-normal'>{item.heading}</h2>
+              <h2 className='font-Para text-lg md:text-2xl font-normal'>{item.heading}</h2>
             </div>
             {currenttab !== index ? <FaPlus /> : <FaMinus />}
           </div>
-          <div className={`${currenttab !== index ? 'hidden':'block'} text-base md:text-xl text-white text-justify font-normal lg:pt-2 xl:pt-4 px-2 md:px-4 ease-in-out duration-300`}>
+          <div className={`${currenttab !== index ? 'hidden':'block'} text-base md:text-xl font-Para text-white text-justify font-normal lg:pt-2 xl:pt-4 px-2 md:px-4 ease-in-out duration-300`}>
             {currenttab === index && <p>
               {item.content}
             </p>}

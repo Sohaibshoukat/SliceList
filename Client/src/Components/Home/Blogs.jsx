@@ -9,7 +9,9 @@ const Blogs = () => {
                 <h1 className='text-5xl md:text-4xl font-head lg:text-5xl font-bold text-center md:max-w-[70%] m-auto mb-10 lg:mb-20 xl:mb-20'>our latest <br/> blogs</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {BlogsData.map((item, index) => (
-                        <BlogsCard item={item} key={index} />
+                        <>
+                         <BlogsCard item={item} key={index} />
+                        </>
                     ))}
                 </div>
             </div>

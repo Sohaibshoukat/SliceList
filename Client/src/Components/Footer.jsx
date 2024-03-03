@@ -34,7 +34,7 @@ const Footer = () => {
             <div className="flex flex-col xl:flex-row justify-between gap-10 lg:gap-20">
                 <div className='basis-[33.3333%]'>
                     <img src={logo} alt="" className='w-[200px] md:w-[250px] h-auto mb-5 md:mb-10' />
-                    <p className='text-white text-lg md:text-xl font-light max-w-[90%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam numquam quia, alias iure ex omnis, quasi libero animi corporis in amet voluptas odit inventore quos officiis quo quod suscipit doloremque. Laborum commodi maxime fugiat?</p>
+                    <p className='text-white text-base md:text-lg font-light max-w-[90%] text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam numquam quia, alias iure ex omnis, quasi libero animi corporis in amet voluptas odit inventore quos officiis quo quod suscipit doloremque. Laborum commodi maxime fugiat?</p>
                 </div>
                 <div className="basis-[33.333%] text-white flex flex-col md:flex-row xl:flex-col gap-x-20">
                     <div className='flex flex-col gap-6 mb-8'>
@@ -55,15 +55,15 @@ const Footer = () => {
                 <div className="md:basis-[33.3333%]  text-white">
                     <h2 className='text-2xl md:text-3xl font-extrabold mb-6'>Subscription</h2>
                     <div className='bg-white rounded-full py-1 pl-2 md:pl-4 pr-1 flex justify-between w-fit'>
-                        <input type="email" className='text-black md:w-auto w-[80%] focus-visible:outline-none placeholder:text-gray-400 border-none text-lg md:text-xl font-semibold rounded-full' placeholder='Your Email' />
-                        <button className='bg-accence px-3 py-1 md:px-6 md:py-2 text-black text-lg md:text-2xl font-bold rounded-full'>Send</button>
+                        <input type="email" className='text-black w-[60%] focus-visible:outline-none placeholder:text-gray-400 border-none text-lg md:text-xl font-semibold rounded-full' placeholder='Your Email' />
+                        <button className='bg-accence px-3 py-1 md:px-6 md:py-1 text-black text-lg md:text-xl font-bold rounded-full'>Send</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div className='w-[100%] text-center py-2 text-base  md:text-xl'>
-        <p>© Copyright 2024 SliceList LTD . All Rights Reserved.</p>
+        <p className='font-Para'>© Copyright 2024 SliceList LTD . All Rights Reserved.</p>
     </div>
     </>
   )
