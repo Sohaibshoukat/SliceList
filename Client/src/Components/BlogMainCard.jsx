@@ -2,10 +2,10 @@ import React from 'react'
 
 const BlogsMainCard = ({ item, des }) => {
     return (
-        <div className='flex flex-col bg-white p-4 rounded-lg'
+        <div className='flex flex-col bg-white p-4 rounded-lg group'
             style={{ boxShadow: "1px 0px 24.299999237060547px 1px #00000040" }}>
-            <div className='basis-[65%] md:basis-[55%]'>
-                <img src={item.Image} alt="" className='md:h-[400px] object-cover w-[100%] rounded-2xl' />
+            <div className='basis-[65%] overflow-hidden rounded-2xl md:basis-[55%]'>
+                <img src={item.Image} alt="" className='md:h-[400px] object-cover group-hover:scale-[1.08] w-[100%] rounded-2xl duration-500 ease-in-out' />
             </div>
             <div className='basis-[30%] md:basis-[40%] md:px-4 py-4 xl:px-8'>
                 <h3 className='font-Para text-base md:text-xl font-normal mb-2 xl:mb-4'>{item.Date}</h3>

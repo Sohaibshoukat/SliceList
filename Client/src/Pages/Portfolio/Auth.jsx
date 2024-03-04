@@ -1,8 +1,9 @@
 import React from 'react'
+import AuthComponent from '../../Components/Auth/AuthComponent'
 
 const Auth = () => {
   return (
-    <div>Auth</div>
+    <AuthComponent/>
   )
 }
 
