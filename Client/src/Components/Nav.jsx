@@ -14,11 +14,11 @@ const Nav = () => {
             <div className="bg-primary shadow-xl flex flex-row justify-between items-center py-4 md:py-6 px-6 md:px-14">
                 <div className='md:basis-[25%]'>
                     <Link to={"/"} onClick={() => {
-                            setDisplay(true);
-                            setTimeout(() => {
-                                setDisplay(false)
-                            }, 50);
-                        }}>
+                        setDisplay(true);
+                        setTimeout(() => {
+                            setDisplay(false)
+                        }, 50);
+                    }}>
                         <img src={logo} alt="" className='w-[150px] md:w-[200px] h-[auto]' />
                     </Link>
                 </div>
@@ -30,18 +30,20 @@ const Nav = () => {
                                 setDisplay(false)
                             }, 50);
                         }}>
-                            <h1 className={`font-extrabold text-lg py-2 px-4 hover:bg-accence hover:text-primary ease-in-out duration-300 rounded-lg ${window.location.pathname === item.Link ? "bg-accence text-primary":"text-white"}`}>{item.Name}</h1>
+                            <h1 className={`font-extrabold text-lg py-2 px-4 hover:bg-accence font-Para hover:text-primary ease-in-out duration-300 rounded-lg ${window.location.pathname === item.Link ? "bg-accence text-primary" : "text-white"}`}>{item.Name}</h1>
                         </Link>
                     ))}
                 </div>
                 <div className='hidden xl:block basis-[25%] '>
-                    <div className='
-                            bg-white float-right text-black flex items-center gap-2 py-2 px-4 text-lg w-fit rounded-lg font-extrabold
+                    <Link to={"/auth"}>
+                        <div className='
+                            bg-white float-right font-Para text-black flex items-center gap-2 py-2 px-4 text-lg w-fit rounded-lg font-extrabold
                             hover:bg-accence  duration-300 ease-in-out
                         '>
-                        <FaUserCircle className='text-2xl' />
-                        Login/Register
-                    </div>
+                            <FaUserCircle className='text-2xl' />
+                            Login/Register
+                        </div>
+                    </Link>
                 </div>
                 <div className='xl:hidden'>
                     <IoMdMenu className='text-3xl text-white font-extrabold' onClick={() => { setMobileMenu(true) }} />
@@ -61,18 +63,20 @@ const Nav = () => {
                             <div className={`flex flex-col gap-2 justify-center`}>
                                 {NavMenu.map((item, index) => (
                                     <Link to={item.Link} onClick={() => { setMobileMenu(false) }}>
-                                        <h1 className={`text-white font-extrabold text-xl lg:text-2xl py-2 px-4 hover:bg-accence hover:text-primary ease-in-out duration-300 rounded-lg ${window.location.pathname == item.Link && "bg-accence text-primary"}`}>{item.Name}</h1>
+                                        <h1 className={` font-Para text-white font-extrabold text-xl lg:text-2xl py-2 px-4 hover:bg-accence hover:text-primary ease-in-out duration-300 rounded-lg ${window.location.pathname == item.Link && "bg-accence text-primary"}`}>{item.Name}</h1>
                                     </Link>
                                 ))}
                             </div>
                             <div className='xl:hidden md:block'>
-                                <div className='
-                            bg-white text-black flex items-center gap-2 py-2 px-4 lg:py-4 lg:px-6 text-xl lg:text-2xl w-fit rounded-lg font-extrabold
-                            hover:bg-accence  duration-300 ease-in-out
-                        '>
-                                    <FaUserCircle className='text-3xl' />
-                                    Login/Register
-                                </div>
+                                <Link to={"/auth"}>
+                                    <div className='
+                                    bg-white text-black flex items-center gap-2 py-2 px-4 lg:py-4 lg:px-6 text-xl lg:text-2xl w-fit rounded-lg font-extrabold
+                                    hover:bg-accence font-Para  duration-300 ease-in-out
+                                    '>
+                                        <FaUserCircle className='text-3xl' />
+                                        Login/Register
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                     </div>
