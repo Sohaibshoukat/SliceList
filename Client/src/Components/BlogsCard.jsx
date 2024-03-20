@@ -13,7 +13,7 @@ const BlogsCard = ({ item, des }) => {
                 {des &&
                     <p className='text-blak font-Para font-normal text-2xl'>{item?.Des}</p>
                 }
-                <button className='bg-black py-2 px-4 font-Para text-xl text-white hover:bg-accence hover:text-black rounded-lg duration-300 ease-in-out mt-8'>Read More</button>
+                <button className='bg-black py-2 px-4 font-Para text-xl text-white hover:bg-accence hover:text-black rounded-lg duration-300 ease-in-out mt-8 mx-auto block'>Read More</button>
             </div>
         </div>
     )

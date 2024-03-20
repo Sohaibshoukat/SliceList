@@ -13,12 +13,7 @@ const Blog = () => {
         <div className='flex flex-col gap-4 md:gap-8 items-center justify-center w-[90%] md:w-auto'>
           <h1 className='text-primary font-head text-5xl md:text-6xl lg:text-7xl font-extrabold text-center'>our blog</h1>
           <p className='text-lg md:text-xl text-center xl:text-2xl font-light md:max-w-[80%] xl:max-w-[60%] font-Para'>Generate Questionnaires, and more by enhancing your marketing emails with compelling customization.</p>
-          <div className='flex flex-row justify-center gap-2 md:gap-8 text-base md:text-xl font-Para'>
-            <button
-              className='bg-black text-white font-Para px-2 py-2 md:px-6 rounded-xl hover:bg-accence hover:text-black duration-300 ease-in-out'>
-              Create a Question
-            </button>
-          </div>
+          
         </div>
       </div>
 

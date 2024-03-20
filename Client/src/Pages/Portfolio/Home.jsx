@@ -30,8 +30,9 @@ const Home = () => {
         </div>
         <Plans />
       </div>
-
-      <Blogs/>
+      <div className='pb-56'>
+        <Blogs />
+      </div>
     </>
   )
 }
