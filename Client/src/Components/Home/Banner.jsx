@@ -31,8 +31,13 @@ const Banner = () => {
     return (
         <>
 
-            <div className=" bg-black top-28 flex flex-col md:flex-row  FadeIn  ">
-             
+            <div 
+                className=" flex flex-col md:flex-row  FadeIn"
+                style={{
+                    background: "url(./Images/BG.png) no-repeat",
+                    backgroundSize: "100% 100%"
+                }}
+            >
                 <div className='flex flex-col justify-center p-6 text-center md:px-12 m-auto md:w-1/2 '>
                     <h1 className=' text-white text-md md:text-lg lg:text-2xl xl:text-3xl font-bold font-Para  mb-6 xl:mb-8'>Grow Your Email Marketing Performance <br /> with  Laser-Targeted Insights</h1>
                     <p className=' text-white text-md md:text-lg xl:text-xl font-light  font-Para mb-10 lg:mb-16'>Generate Questionnaires, and more by enhancing your marketing emails with compelling customization.</p>
