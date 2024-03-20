@@ -14,35 +14,35 @@ const Why = () => {
                                 <div className="hidden  md:flex flex-row justify-between gap-16 items-center">
                                     {index % 2 == 0 ?
                                         <>
-                                            <div className="bg-black md:basis-[50%] rounded-xl">
+                                            <div className=" md:basis-[50%] rounded-xl">
                                                 <img src={item.Image} alt="" className='w-[100%] h-[100%] rounded-xl' />
                                             </div>
                                             <div className='flex text-left flex-col gap-y-2 md:basis-[50%]'>
-                                                <h1 className='text-4xl tracking-wide font-bold font-head'>{item.Heading}</h1>
+                                                <h1 className='text-3xl tracking-wide font-bold font-Para'>{item.Heading}</h1>
                                                 <p className='text-xl font-normal mb-4 font-Para text-justify'>{item.Para}</p>
-                                                <div className='flex flex-col gap-4'>
+                                                {/* <div className='flex flex-col gap-4'>
                                                     {item.Feature.map((item2, index2) => (
                                                         <div className='' key={index2}>
                                                             <p className='text-lg font-normal text-black font-Para'><span className='font-bold'>{item2.question}:</span> {item2.answer}</p>
                                                         </div>
                                                     ))}
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </>
                                         :
                                         <>
                                             <div className='flex text-left flex-col gap-y-2 md:basis-[50%]'>
-                                                <h1 className='text-4xl tracking-wide font-bold font-head'>{item.Heading}</h1>
+                                                <h1 className='text-3xl tracking-wide font-bold font-Para'>{item.Heading}</h1>
                                                 <p className='text-xl font-normal mb-4 font-Para text-justify'>{item.Para}</p>
-                                                <div className='flex flex-col gap-4'>
+                                                {/* <div className='flex flex-col gap-4'>
                                                     {item.Feature.map((item2, index2) => (
                                                         <div className='' key={index2}>
                                                             <p className='text-lg font-normal text-black font-Para'><span className='font-bold'>{item2.question}:</span> {item2.answer}</p>
                                                         </div>
                                                     ))}
-                                                </div>
+                                                </div> */}
                                             </div>
-                                            <div className="bg-black md:basis-[50%] rounded-xl">
+                                            <div className=" md:basis-[50%] rounded-xl">
                                                 <img src={item.Image} alt="" className='w-[100%] h-[100%] rounded-xl' />
 
                                             </div>

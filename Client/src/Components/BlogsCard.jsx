@@ -8,8 +8,8 @@ const BlogsCard = ({ item, des }) => {
                 <img src={item?.Image} alt="" className='group-hover:scale-[1.08] ease-in-out duration-300  w-[100%]' />
             </div>
             <div className='basis-[40%] py-4 px-8'>
-                <h3 className='font-Para text-xl font-light mb-4'>{item?.Date}</h3>
-                <h2 className='font-head text-3xl font-bold'>{item?.Name}</h2>
+                <h3 className='font-Para text-xl font-semibold mb-4'>{item?.Date}</h3>
+                <h2 className='font-Para text-2xl font-bold'>{item?.Name}</h2>
                 {des &&
                     <p className='text-blak font-Para font-normal text-2xl'>{item?.Des}</p>
                 }
