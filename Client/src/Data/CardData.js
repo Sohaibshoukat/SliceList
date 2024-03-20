@@ -9,6 +9,8 @@ export const PricingPlan=[
         BtnText:"Get Started",
         Btn2Text:"Chat to Sales",
         Users: "Basic Features for up to 10 users",
+        Plan: "Currnet Plan",
+        PlanStatus: true,
         FeatureHeading: "Everything in our free plan plus...",
         Features:[
             "1 Form",
@@ -26,6 +28,8 @@ export const PricingPlan=[
         Btn2Text:"Chat to Sales",
         Users: "Growing teams for up to 20 users",
         Best:true,
+        Plan: "Popular",
+        PlanStatus: true,
         FeatureHeading: "Everything in Basic Plus",
         Features:[
             "5 Form",
@@ -47,6 +51,7 @@ export const PricingPlan=[
         Users: "Advance features + Unlimited Users",
         Best:false,
         FeatureHeading: "Everything in Business plan plus...",
+        PlanStatus: false,
         Features:[
             "Unlimited Forms",
             "Basic Designs",

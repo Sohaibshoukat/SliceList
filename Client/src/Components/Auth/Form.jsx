@@ -13,7 +13,7 @@ const Form = ({StateSet}) => {
 
     return (
         <>
-            <div className={`w-[95%] md:w-[90%] lg:w-[80%] xl:w-[70%] relative min-h-[630px] md:min-h-[700px] m-auto mb-20 container2`} id="container">
+            <div className={`w-[80%] md:w-[90%] lg:w-[80%] xl:w-[70%] relative min-h-[630px] md:min-h-[700px] m-auto mb-20 container2`} id="container">
                 <div class="py-10 md:py-20 form-container sign-up-container sm:translate-x-0 w-[100%] md:w-[60%]" id="SignUp">
                     <form action="#" className='sm:px-10'>
                         <h1 className='text-black font-Para text-2xl md:text-4xl font-bold mb-3'>Create Account</h1>
