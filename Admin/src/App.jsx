@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import AdminDashboard from './Pages/AdminDashboard'
 import { BrowserRouter,Route, Routes } from 'react-router-dom'
+import Redirect from './Pages/Redirect'
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
     
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<AdminDashboard/>}></Route>
+      <Route path="/" element={<Redirect/>} />
+        <Route path="/admin-dashboard/*" element={<AdminDashboard/>}></Route>
         </Routes>
         </BrowserRouter>
     </>

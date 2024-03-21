@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 
 
@@ -8,10 +8,10 @@ const SubscriptionPlan = () => {
     return (
         <div>
 
-            Subscription Plan
+            <h1>subscription Plan</h1>
 
         </div>
-    )
+    );
 }
 
 export default SubscriptionPlan;

@@ -20,4 +20,4 @@ const Redirect = () => {
     )
 }
 
-export default Redirect
+export default Redirect;
