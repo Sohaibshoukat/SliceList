@@ -2,16 +2,24 @@ import React, { useState } from 'react'
 import Nav from '../Components/Nav'
 import { FiChevronDown } from 'react-icons/fi';
 import { Route, Routes } from 'react-router-dom'
-import SubscriptionPlan from './SubscriptionPlan';
+import SubscriptionPlan from './Views/SubscriptionPlan';
+import Home from './Views/Home';
+import UserAnalysis from './Views/UserAnalysis';
+import BlockUser from './Views/BlockUser';
+import Features from './Views/Features';
+import FAQ from './Views/FAQ';
+import UploadForm from './Views/UploadForm';
+import Blogs from './Views/Blogs';
+import Testimonials from './Views/Testimonials';
 
 
 const AdminDashboard = () => {
 
     return (
-        <div className='flex  flex-row'>
+        <div className='flex flex-row h-[100vh] overflow-hidden'>
 
             {/* SideBar */}
-            <div>
+            <div className='md:basis-[45%] xl:basis-[20%]'>
                 <Nav />
             </div>
 
@@ -30,7 +38,42 @@ const AdminDashboard = () => {
                 <div>
                     {/* Routes Here */}
                     <Routes>
-                        <Route path='/admin-dashboard/subscription-plan' element={<SubscriptionPlan />} />
+                        <Route
+                            path='/'
+                            element={<Home />}
+                        />
+                        <Route
+                            path='/subscription-plan'
+                            element={<SubscriptionPlan />}
+                        />
+                        <Route
+                            path='/user-analysis'
+                            element={<UserAnalysis />}
+                        />
+                        <Route
+                            path='/blocked-users'
+                            element={<BlockUser />}
+                        />
+                        <Route
+                            path='/features'
+                            element={<Features />}
+                        />
+                        <Route
+                            path='/FAQ'
+                            element={<FAQ />}
+                        />
+                        <Route
+                            path='/form-design'
+                            element={<UploadForm />}
+                        />
+                        <Route
+                            path='/blogs'
+                            element={<Blogs />}
+                        />
+                        <Route
+                            path='/testimonials'
+                            element={<Testimonials />}
+                        />
                     </Routes>
                 </div>
             </div>
