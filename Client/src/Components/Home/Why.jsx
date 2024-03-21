@@ -14,10 +14,11 @@ const Why = () => {
                                 <div className="hidden  md:flex flex-row justify-between gap-16 items-center">
                                     {index % 2 == 0 ?
                                         <>
-                                            <div className=" md:basis-[50%] rounded-xl">
-                                                <img src={item.Image} alt="" className='w-[100%] h-[100%] rounded-xl' />
+                                            <div className="relative md:basis-[40%] rounded-xl">
+                                                <img src={item.Image} alt="" className='relative w-[100%] h-[100%] rounded-xl' />
+                                                <img src={item.Image2} alt="" className={`absolute floatanimation w-[40%] top-10 left-44 md:top-16 md:left-48  lg:top-20 lg:left-64 rounded-xl ${item.TwoImages ? "block" : "hidden"}`} />
                                             </div>
-                                            <div className='flex text-left flex-col gap-y-2 md:basis-[50%]'>
+                                            <div className='flex text-left flex-col gap-y-2 md:basis-[60%]'>
                                                 <h1 className='text-3xl tracking-wide font-bold font-Para'>{item.Heading}</h1>
                                                 <p className='text-xl font-normal mb-4 font-Para text-justify'>{item.Para}</p>
                                                 {/* <div className='flex flex-col gap-4'>
@@ -31,7 +32,7 @@ const Why = () => {
                                         </>
                                         :
                                         <>
-                                            <div className='flex text-left flex-col gap-y-2 md:basis-[50%]'>
+                                            <div className='flex text-left flex-col gap-y-2 md:basis-[60%]'>
                                                 <h1 className='text-3xl tracking-wide font-bold font-Para'>{item.Heading}</h1>
                                                 <p className='text-xl font-normal mb-4 font-Para text-justify'>{item.Para}</p>
                                                 {/* <div className='flex flex-col gap-4'>
@@ -42,7 +43,7 @@ const Why = () => {
                                                     ))}
                                                 </div> */}
                                             </div>
-                                            <div className=" md:basis-[50%] rounded-xl">
+                                            <div className=" md:basis-[40%] rounded-xl">
                                                 <img src={item.Image} alt="" className='w-[100%] h-[100%] rounded-xl' />
 
                                             </div>
@@ -50,26 +51,29 @@ const Why = () => {
                                     }
                                 </div>
                                 <div className="md:hidden  flex flex-col justify-between gap-10 items-center">
-                                    <div className="bg-black rounded-xl">
-                                        <img src={item.Image} alt="" className='w-[100%] h-[100%] rounded-xl' />
+                                    <div className="relative rounded-xl">
+                                        <img src={item.Image} alt="" className='w-full rounded-xl' />
+                                        <div className='absolute top-20 left-48 xxs:top-20 xxs:left-56 xs:top-28 xs:left-72 sm:top-32 sm:left-80 w-[40%] floatanimation   rounded-xl'>
+                                            <img src={item.Image2} alt="" className={`  ${item.TwoImages ? "block" : "hidden"}`} />
+                                        </div>
                                     </div>
                                     <div className='flex text-left flex-col gap-y-2 md:basis-[50%]'>
-                                        <h1 className='text-4xl tracking-wide font-bold font-head'>{item.Heading}</h1>
+                                        <h1 className='text-4xl tracking-wide font-bold font-Para'>{item.Heading}</h1>
                                         <p className='text-xl font-normal mb-4 font-Para'>{item.Para}</p>
-                                        <div className='flex flex-col gap-4'>
+                                        {/* <div className='flex flex-col gap-4'>
                                             {item.Feature.map((item2, index2) => (
                                                 <div className='' key={index2}>
                                                     <p className='text-lg font-normal text-black font-Para'><span className='font-bold'>{item2.question}:</span> {item2.answer}</p>
                                                 </div>
                                             ))}
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </>
                         ))}
                     </div>
                     <div className='flex flex-col justify-center items-center py-8 md:py-16'>
-                        <button className='bg-black text-white font-Para rounded-lg px-4 py-2 text-xl font-semibold text-center hover:bg-accence hover:text-black duration-300 ease-in-out'>Start Your Free Trial</button>
+                        <button className='bg-black text-white font-Para rounded-lg px-6 py-4 text-xl font-semibold text-center hover:bg-accence hover:text-black duration-300 ease-in-out'>Start Your Free Trial</button>
                     </div>
                 </div>
             </div>
