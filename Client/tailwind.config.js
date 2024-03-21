@@ -23,6 +23,10 @@ export default {
         Para:'"Poppins", sans-serif',
         indexs:"Limelight",
         head:'"Bebas Neue", sans-serif'
+      },
+      screens: {
+        'xs': '500px',
+        'xxs': '400px'
       }
     },
   },

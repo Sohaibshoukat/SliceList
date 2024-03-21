@@ -17,13 +17,13 @@ const Plans = () => {
                     className={`cursor-pointer h-[100%] basis-[50%] font-para md:font-head text-center px-2 py-2 md:px-6 ${selected == "Monthly" && "bg-white text-black  rounded-full bounceleft"} duration-300 ease-in-out`}
                     onClick={() => { toggleSelected("Monthly") }}
                 >
-                    <h1 className='tracking-widest text-xs md:text-sm '>Monthly</h1>
+                    <h1 className='tracking-widest text-xs sm:text-sm md:text-xl '>Monthly</h1>
                 </div>
                 <div
                     className={`cursor-pointer flex gap-2 basis-[50%] font-para md:font-head px-1 md:px-2 py-2 justify-center items-center ${selected == "Annualy" && "bg-white  text-black  rounded-full bounceright"} duration-300 ease-in-out`}
                     onClick={() => { toggleSelected("Annualy") }}
                 >
-                    <h1 className='tracking-widest text-xs md:text-sm'>Annualy</h1>
+                    <h1 className='tracking-widest text-xs sm:text-sm md:text-xl'>Annualy</h1>
 
                 </div>
             </div>
