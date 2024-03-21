@@ -1,79 +1,102 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { FaChartPie, FaRegQuestionCircle, FaUserPlus } from "react-icons/fa";
+import { FaBloggerB } from 'react-icons/fa6'
+import { IoCartOutline } from "react-icons/io5";
+import { IoIosListBox, IoIosPeople } from "react-icons/io";
+import { Link, useNavigate } from 'react-router-dom';
+import { MdBlock } from "react-icons/md"
+import { LiaWpforms } from "react-icons/lia"
+import { PiSignOut } from "react-icons/pi"
 
 const Nav = () => {
-    const location = useLocation(); // Using useLocation hook to get the current location
+    const navigate = useNavigate()
 
     const tabs = [
         {
             name: 'Dashboard',
-            Icon: "../assets/Navigation/Dashboard.png",
-            link: '/admin-dashboard',
+            Icon: FaChartPie,
+            link: '/admin-dashboard/',
         },
         {
             name: 'Subscription Plan',
-            Icon: "../assets/Navigation/Cart.png",
+            Icon: IoCartOutline,
             link: '/admin-dashboard/subscription-plan',
         },
         {
             name: 'User Analysis',
-            Icon: "../assets/Navigation/NewUser.png",
+            Icon: FaUserPlus,
             link: '/admin-dashboard/user-analysis',
         },
         {
             name: 'Blocked Users',
-            Icon: "../assets/Navigation/Block.png",
+            Icon: MdBlock,
             link: '/admin-dashboard/blocked-users',
         },
         {
             name: 'Features',
-            Icon: "../assets/Navigation/Feature.png",
+            Icon: IoIosListBox,
             link: '/admin-dashboard/features',
         },
         {
             name: "FAQ's",
-            Icon: "../assets/Navigation/FAQ.png",
+            Icon: FaRegQuestionCircle,
             link: '/admin-dashboard/FAQ',
         },
         {
             name: 'Form Design',
-            Icon: "../assets/Navigation/Form.png",
+            Icon: LiaWpforms,
             link: '/admin-dashboard/form-design',
         },
         {
             name: 'Blogs',
-            Icon: "../assets/Navigation/Blog.png",
+            Icon: FaBloggerB,
             link: '/admin-dashboard/blogs',
         },
         {
-            name: 'Testimonials',
-            Icon: "../assets/Navigation/Testimonials.png",
+            name: 'testimonials',
+            Icon: IoIosPeople,
             link: '/admin-dashboard/testimonials',
-        },
-        {
-            name: 'Sign Out',
-            Icon: "../assets/Navigation/SignOut.png",
-            link: '/admin-dashboard/login',
         }
     ];
+
     return (
-        <div className={`flex-col bg-white xl:h-full h-screen px-5 pt-8 w-15 md:w-72 items-center shadow-md`}>
-            <img className='hidden sm:block pb-5 px-6' src='../assets/Logo.png'></img>
-            <img className='md:hidden pb-3' src='../assets/LogoMobile.png'></img>
-            <ul>
+        <div className={`flex-col bg-white xl:h-full  px-2 pt-2 md:pt-8 w-[100%] h-[100vh] items-center shadow-md`}>
+            <img className='hidden md:block pb-10 px-6' src='../assets/Logo.png'></img>
+            <img className='md:hidden text-center m-auto w-10 pb-2' src='../assets/LogoMobile.png'></img>
+            <ul className='flex flex-col gap-4 overflow-y-scroll max-h-[80vh]'>
                 {tabs.map((tab, index) => (
                     <Link key={index} to={tab.link}>
-                     
                         <li>
-                            <div className={`inline-flex w-full sm:px-3 sm:py-1 sm:my-2 gap-5 items-center text-custom-gray hover:text-custom-black ${location.pathname === tab.link ? 'sm:bg-black sm:rounded-lg text-white' : ''}`}>
-                                <img className='py-2'src={tab.Icon}></img>
-                                <div className='hidden sm:block'>
+                            <div
+                                className={`
+                                    inline-flex w-full px-4 py-4 gap-4 items-center text-custom-gray 
+                                    group  ease-in-out duration-300 hover:bg-black hover:rounded-2xl hover:text-white
+                                    ${location.pathname === tab.link ? 'bg-black rounded-2xl text-white shadow-2xl' : 'text-gray-500'}
+                                `}>
+                                <tab.Icon className='text-2xl' />
+                                <div className={`hidden md:block font-Para text-lg `}>
                                     {tab.name}
                                 </div>
                             </div>
                         </li>
                     </Link>
                 ))}
+                <li>
+                    <div
+                        className={`
+                                    inline-flex w-full px-4 py-4 gap-4 items-center text-custom-gray text-gray-500
+                                    group  ease-in-out duration-300 hover:bg-black hover:rounded-2xl hover:text-white     
+                                `}
+                        onClick={()=>{
+                            navigate('/login')
+                        }}
+                    >
+                        <PiSignOut className='text-2xl' />
+                        <div className={`hidden md:block font-Para text-lg `}>
+                            Sign Out
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     )
