@@ -28,47 +28,11 @@ const UserDashboard = () => {
                     </div>
                 </div>
 
-                {/* <div>
-                    
+                <div>
                     <Routes>
-                        <Route
-                            path='/'
-                            element={<Home />}
-                        />
-                        <Route
-                            path='/subscription-plan'
-                            element={<SubscriptionPlan />}
-                        />
-                        <Route
-                            path='/user-analysis'
-                            element={<UserAnalysis />}
-                        />
-                        <Route
-                            path='/blocked-users'
-                            element={<BlockUser />}
-                        />
-                        <Route
-                            path='/features'
-                            element={<Features />}
-                        />
-                        <Route
-                            path='/FAQ'
-                            element={<FAQ />}
-                        />
-                        <Route
-                            path='/form-design'
-                            element={<UploadForm />}
-                        />
-                        <Route
-                            path='/blogs'
-                            element={<Blogs />}
-                        />
-                        <Route
-                            path='/testimonials'
-                            element={<Testimonials />}
-                        />
+                        
                     </Routes>
-                </div> */}
+                    </div>
             </div>
 
         </div>
