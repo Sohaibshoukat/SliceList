@@ -58,11 +58,11 @@ const Why = () => {
                                         <div className='absolute top-20 left-48 xxs:top-20 xxs:left-56 xs:top-28 xs:left-72 sm:top-32 sm:left-80 w-[40%] floatanimation   rounded-xl'>
                                             <img src={item.Image2} alt="" className={`  ${item.TwoImages ? "block" : "hidden"}`} />
                                         </div>
-                                        <img src={item.Image3} alt="" className={`absolute floatanimation w-[50%] -top-6 -left-2 xxs:-top-6 xxs:-left-2 xs:-top-6 xs:-left-7 sm:-top-6 sm:-left-10 md:-top-6 md:-left-10  lg:-top-6 lg:-left-10 rounded-xl ${item.ThreeImages ? "block" : "hidden"}`} />
+                                        <img src={item.Image3} alt="" className={`absolute floatanimation w-[50%] -top-6 -left-2 xxs:-top-4 xxs:-left-2 xs:-top-6 xs:-left-5 sm:-top-6 sm:-left-10 md:-top-6 md:-left-10  lg:-top-6 lg:-left-10 rounded-xl ${item.ThreeImages ? "block" : "hidden"}`} />
                                         <img src={item.Image4} alt="" className={`absolute floatanimation w-[25%] top-24 left-[80%] xxs:top-24 xxs:left-[80%] xs:top-32 xs:left-[80%] sm:top-32 sm:left-[85%] md:top-28 md:left-64  lg:top-32 lg:left-80 rounded-xl ${item.ThreeImages ? "block" : "hidden"}`} />
                                     </div>
                                     <div className='flex text-left flex-col gap-y-2 md:basis-[50%]'>
-                                        <h1 className='text-4xl tracking-wide font-bold font-Para'>{item.Heading}</h1>
+                                        <h1 className='text-2xl tracking-wide font-bold font-Para'>{item.Heading}</h1>
                                         <p className=' text-md md:text-lg lg:text-xl font-normal mb-4 font-Para'>{item.Para}</p>
                                         {/* <div className='flex flex-col gap-4'>
                                             {item.Feature.map((item2, index2) => (
