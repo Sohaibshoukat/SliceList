@@ -1,8 +1,8 @@
 export const NavMenu=[
-    {
-        Name:"How It Works?",
-        Link:"/how-it-work"
-    },
+    // {
+    //     Name:"How It Works?",
+    //     Link:"/how-it-work"
+    // },
     {
         Name:"How To",
         Link:"/how-to"
