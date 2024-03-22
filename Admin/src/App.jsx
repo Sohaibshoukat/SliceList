@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<Redirect />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgotPassword" element={<ForgotPassword />} />
-          <Route path="/forgotPassword2" element={<ForgotPassword2 />} />
+          <Route path="/updatePassword" element={<ForgotPassword2 />} />
           <Route path="/admin-dashboard/*" element={<AdminDashboard />}></Route>
         </Routes>
       </BrowserRouter>
