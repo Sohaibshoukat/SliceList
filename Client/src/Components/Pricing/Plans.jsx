@@ -11,7 +11,7 @@ const Plans = () => {
     };
     return (
         <div className='w-[95%] md:w-[90%] xl:w-[80%] m-auto  py-6 xl:py-8'>
-            <p className='text-center mb-8 font-Para font-medium mx-10 block md:hidden'>No credit card required. Cancel any time. All taxes included.</p>
+            <p className='text-center mb-8 font-Para font-medium mx-10 hidden md:block'>No credit card required. Cancel any time. All taxes included.</p>
             <div className='flex justify-center items-center m-auto w-[50%] lg:w-[30%] xl:w-[20%] border-2 border-black bg-black rounded-full text-xl md:text-2xl font-bold text-white p-1 mb-10 md:mb-20'>
                 <div
                     className={`cursor-pointer h-[100%] basis-[50%] font-para md:font-head text-center px-2 py-2 md:px-6 ${selected == "Monthly" && "bg-white text-black  rounded-full bounceleft"} duration-300 ease-in-out`}
