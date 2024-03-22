@@ -4,6 +4,8 @@ import AdminDashboard from './Pages/AdminDashboard'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Redirect from './Pages/Redirect'
 import Login from './Pages/Login'
+import ForgotPassword from './Pages/ForgotPassword'
+import ForgotPassword2 from './Pages/ForgotPassword2'
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Redirect />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/forgotPassword" element={<ForgotPassword />} />
+          <Route path="/forgotPassword2" element={<ForgotPassword2 />} />
           <Route path="/admin-dashboard/*" element={<AdminDashboard />}></Route>
         </Routes>
       </BrowserRouter>
