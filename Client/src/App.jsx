@@ -9,17 +9,20 @@ import HowItWork from './Pages/Portfolio/HowItWork'
 import Blog from './Pages/Portfolio/Blog'
 import Auth from './Pages/Portfolio/Auth'
 import Pricing from './Pages/Portfolio/Pricing'
+import UserDashBoard from './Pages/DashBoard/UserDashboard'
 
 function App() {
 
   return (
     <>
+    
       <BrowserRouter >
-      <ScrollToTop/>
-        <Nav />
-        <Routes>
+      <ScrollToTop/> 
+        <Nav /> 
+         <Routes>
           <Route path="/" element={<Home />}></Route>
           {/* <Route path="/how-it-work" element={<HowItWork />}></Route> */}
+          <Route path="/dashboard" element={<UserDashBoard />}></Route>
           <Route path="/how-to" element={<HowTo />}></Route>
           <Route path="/our-blogs" element={<Blog />}></Route>
           <Route path="/pricing-plans" element={<Pricing />}></Route>
