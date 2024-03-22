@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import DashBoardNav from '..//../Components/Dashboard/DashboardNav'
+import DashBoardNav from '../../Components/Dashboard/DashboardNav'
 import { FiChevronDown } from 'react-icons/fi';
 import { Route, Routes } from 'react-router-dom'
 import ImageHolder from '..//../assets/Images/DashBoard/ImageHolder.png'
-
-
 
 
 const UserDashboard = () => {
