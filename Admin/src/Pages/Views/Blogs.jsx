@@ -1,10 +1,9 @@
 import React from 'react'
-import AdminForm from '../../Components/AdminProfile/AdminForm'
 
 const Blogs = () => {
   return (
     <>
-      <AdminForm/>
+    <h1>Blog</h1>
     </>
   )
 }

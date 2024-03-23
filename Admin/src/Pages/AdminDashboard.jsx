@@ -11,6 +11,7 @@ import FAQ from './Views/FAQ';
 import UploadForm from './Views/UploadForm';
 import Blogs from './Views/Blogs';
 import Testimonials from './Views/Testimonials';
+import AdminProfile from './Views/AdminProfile';
 
 
 const AdminDashboard = () => {
@@ -69,6 +70,10 @@ const AdminDashboard = () => {
                         <Route
                             path='/blogs'
                             element={<Blogs />}
+                        />
+                        <Route
+                            path='/admin-profile'
+                            element={<AdminProfile/>}
                         />
                         <Route
                             path='/testimonials'

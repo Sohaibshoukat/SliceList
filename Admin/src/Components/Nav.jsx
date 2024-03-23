@@ -53,6 +53,11 @@ const Nav = () => {
             link: '/admin-dashboard/blogs',
         },
         {
+            name: 'Admin Profile',
+            Icon: FaBloggerB,
+            link: '/admin-dashboard/admin-profile',
+        },
+        {
             name: 'testimonials',
             Icon: IoIosPeople,
             link: '/admin-dashboard/testimonials',

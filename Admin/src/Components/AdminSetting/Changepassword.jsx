@@ -14,7 +14,7 @@ const Changepassword = () => {
                         <FaLock className='text-2xl' />
 
 
-                        <h2 className={`text-xl md:text-3xl font-bold  font-head text-black `}>Change password</h2>
+                        <h2 className={`text-xl md:text-3xl   font-head text-black `}>Change password</h2>
 
                     </div>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 px-6 sm:px-8 md:px-10'>

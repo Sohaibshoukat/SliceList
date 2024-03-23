@@ -7,7 +7,7 @@ const AdminForm = () => {
         <>
             {AdminData.map((item, index) => (
                 <>
-                    <div className='flex flex-col justify-center items-center gap-6  p-8 pb-14'>
+                    <div className='flex flex-col justify-center items-center gap-6  p-8 pb-14' key={index}>
 
                         <img src={item.AdminPic} alt="Admin" className=' w-28 md:w-36' />
                         <h2 className='font-Para text-2xl sm:text-3xl font-bold'>{item.Name}</h2>
