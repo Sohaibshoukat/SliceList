@@ -8,6 +8,7 @@ import { MdBlock } from "react-icons/md"
 import { LiaWpforms } from "react-icons/lia"
 import { PiSignOut } from "react-icons/pi"
 
+
 const Nav = () => {
     const navigate = useNavigate()
 
@@ -66,8 +67,8 @@ const Nav = () => {
 
     return (
         <div className={`flex-col bg-white xl:h-full  px-2 pt-2 md:pt-8 w-[100%] h-[100vh] items-center shadow-md`}>
-            <img className='hidden md:block pb-10 px-6' src='../assets/Logo.png'></img>
-            <img className='md:hidden text-center m-auto w-10 pb-2' src='../assets/LogoMobile.png'></img>
+            <img className='hidden md:block pb-10 px-6' src='..//../assets/Logo.png'></img>
+            <img className='md:hidden text-center m-auto w-10 pb-2' src='..//../assets/LogoMobile.png'></img>
             <ul className='flex flex-col gap-4 overflow-y-scroll max-h-[80vh]'>
                 {tabs.map((tab, index) => (
                     <Link key={index} to={tab.link}>
