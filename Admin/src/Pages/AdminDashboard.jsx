@@ -11,12 +11,15 @@ import FAQ from './Views/FAQ';
 import UploadForm from './Views/UploadForm';
 import Blogs from './Views/Blogs';
 import Testimonials from './Views/Testimonials';
+import EditTestimonials from './Views/EditTestimonials';
+
 
 
 const AdminDashboard = () => {
 
     return (
-        <div className='flex flex-row h-[100vh] overflow-hidden'>
+        // overflow-hidden
+        <div className='flex flex-row h-[100vh] '>
 
             {/* SideBar */}
             <div className='md:basis-[45%] xl:basis-[20%]'>
@@ -29,7 +32,7 @@ const AdminDashboard = () => {
                 <div className='flex flex-row text-custom-black justify-between items-center shadow-md sm:p-5 p-2 '>
                     <h1 className='lg:text-3xl md:text-2xl sm:text-xl font-bold'>Dashboard</h1>
                     <div className='flex flex-row items-center px-2 md:px-5'>
-                        <img src='../assets/ImageHolder.png' className='h-8 md:h-10 sm:h-6 px-2'></img>
+                        <img src='../public/assets/ImageHolder.png' className='h-8 md:h-10 sm:h-6 px-2'></img>
                         <h1 className='md:text-xl sm:text-base'>Admin</h1>
                         <FiChevronDown className='mx-2' />
                     </div>
@@ -73,6 +76,10 @@ const AdminDashboard = () => {
                         <Route
                             path='/testimonials'
                             element={<Testimonials />}
+                        />
+                        <Route
+                            path='/edit-testimonial'
+                            element={<EditTestimonials />}
                         />
                     </Routes>
                 </div>
