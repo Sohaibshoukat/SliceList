@@ -14,16 +14,16 @@ const Plans = () => {
             <p className='text-center mb-8 font-Para font-medium mx-10 hidden md:block'>No credit card required. Cancel any time. All taxes included.</p>
             <div className='flex justify-center items-center m-auto w-[50%] lg:w-[30%] xl:w-[20%] border-2 border-black bg-black rounded-full text-xl md:text-2xl font-bold text-white p-1 mb-10 md:mb-20'>
                 <div
-                    className={`cursor-pointer h-[100%] basis-[50%] font-para md:font-head text-center px-2 py-2 md:px-6 ${selected == "Monthly" && "bg-white text-black  rounded-full bounceleft"} duration-300 ease-in-out`}
+                    className={`cursor-pointer h-[100%] basis-[50%] font-para md:font-Para text-center px-2 py-2 md:px-6 ${selected == "Monthly" && "bg-white text-black  rounded-full bounceleft"} duration-300 ease-in-out`}
                     onClick={() => { toggleSelected("Monthly") }}
                 >
-                    <h1 className='tracking-widest text-xs sm:text-sm md:text-xl '>Monthly</h1>
+                    <h1 className='text-xs sm:text-sm md:text-lg '>Monthly</h1>
                 </div>
                 <div
-                    className={`cursor-pointer flex gap-2 basis-[50%] font-para md:font-head px-1 md:px-2 py-2 justify-center items-center ${selected == "Annualy" && "bg-white  text-black  rounded-full bounceright"} duration-300 ease-in-out`}
+                    className={`cursor-pointer flex gap-2 basis-[50%] font-para md:font-para px-1 md:px-2 py-2 justify-center items-center ${selected == "Annualy" && "bg-white  text-black  rounded-full bounceright"} duration-300 ease-in-out`}
                     onClick={() => { toggleSelected("Annualy") }}
                 >
-                    <h1 className='tracking-widest text-xs sm:text-sm md:text-xl'>Annualy</h1>
+                    <h1 className='text-xs sm:text-sm md:text-lg'>Annualy</h1>
 
                 </div>
             </div>

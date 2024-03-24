@@ -18,6 +18,9 @@ export default {
       backgroundColor:{
         yellow: "#F7C74C"
       },
+      boxShadow:{
+        boxshade: "1px 0px 11.5px 0px #00000040"
+      },
       fontFamily:{
         Heading:'"Inter", sans-serif',
         Para:'"Poppins", sans-serif',
