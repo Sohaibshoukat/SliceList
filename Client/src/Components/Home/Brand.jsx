@@ -1,10 +1,4 @@
 import React from 'react'
-import HubSpot from "../../assets/Images/Brands/hubspot-white.svg"
-import Drip from "../../assets/Images/Brands/drip.svg"
-import Acc from "../../assets/Images/Brands/acc-white.svg"
-import smaily from "../../assets/Images/Brands/smaily.svg"
-import Kalviyo from "../../assets/Images/Brands/Kalviyo.png"
-import vierless from "../../assets/Images/Brands/vierless.png"
 
 import Marquee from 'react-fast-marquee';
 
@@ -13,35 +7,35 @@ const Brand = () => {
     const BrandData = [
         {
             Title: "HubSpot",
-            Image: Kalviyo
+            Image: "./Images/Brands/Kalviyo.png"
         },
         {
             Title: "Drip",
-            Image: vierless
+            Image: "./Images/Brands/vierless.png"
         },
         {
             Title: "Acc",
-            Image: Kalviyo
+            Image: "./Images/Brands/Kalviyo.png"
         },
         {
             Title: "Smaily",
-            Image: vierless
+            Image: "./Images/Brands/vierless.png"
         },
         {
             Title: "HubSpot",
-            Image: Kalviyo
+            Image: "./Images/Brands/Kalviyo.png"
         },
         {
             Title: "Drip",
-            Image: vierless
+            Image: "./Images/Brands/vierless.png"
         },
         {
             Title: "Acc",
-            Image: Kalviyo
+            Image: "./Images/Brands/Kalviyo.png"
         },
         {
             Title: "Smaily",
-            Image: vierless
+            Image: "./Images/Brands/vierless.png"
         },
     ]
 

@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import google from "../../assets/Images/google.png";
-import facebook from "../../assets/Images/facebook.png"
 
 import circle from "../../assets/Images/Shapes/circle.png"
 import polygon from "../../assets/Images/Shapes/polygon.png"
@@ -19,8 +17,8 @@ const Form = ({StateSet}) => {
                         <h1 className='text-black font-Para text-2xl md:text-4xl font-bold mb-3'>Create Account</h1>
                         <h2 className='text-black font-Para text-xl font-light'> Sign Up With</h2>
                         <div class="flex flex-row gap-6 social-container my-4">
-                            <img src={google} alt="" className='w-[50px] h-[50px]' />
-                            <img src={facebook} alt="" className='w-[50px] h-[50px]' />
+                            <img src="./Images/google.png" alt="" className='w-[50px] h-[50px]' />
+                            <img src="./Images/facebook.png" alt="" className='w-[50px] h-[50px]' />
                         </div>
                         <div className='font-Para text-black text-2xl font-bold my-2'>Or</div>
                         <div className='flex flex-col gap-4 text-left items-start w-[80%] m-auto'>
@@ -47,8 +45,8 @@ const Form = ({StateSet}) => {
                         <h1 className='text-black font-Para text-2xl md:text-4xl font-bold mb-3'>Login To Your Account</h1>
                         <h2 className='text-black font-Para text-xl font-light'>Login with</h2>
                         <div class="flex flex-row gap-6 social-container my-4">
-                            <img src={google} alt="" className='w-[50px] h-[50px]' />
-                            <img src={facebook} alt="" className='w-[50px] h-[50px]' />
+                            <img src="./Images/google.png" alt="" className='w-[50px] h-[50px]' />
+                            <img src="/Images/facebook.png"alt="" className='w-[50px] h-[50px]' />
                         </div>
                         <div className='font-Para text-black text-2xl font-bold my-2'>Or</div>
                         <div className='flex flex-col gap-4 text-left items-start w-[80%] m-auto'>
@@ -67,10 +65,10 @@ const Form = ({StateSet}) => {
                     </form>
                 </div>
                 <div class="overlay-container hidden md:block">
-                    <img src={circle} alt="" className='absolute z-50 right-[-20%] top-[5%] w-[100px] xl:w-[150px]' />
-                    <img src={polygon} alt="" className='absolute z-50 left-[10%] top-[10%] lg:top-[20%]  w-[100px] xl:w-[150px]' />
-                    <img src={Polygonrev} alt="" className='absolute z-50 left-[-5%] bottom-[20%] w-[100px] xl:w-[100px]' />
-                    <img src={circle} alt="" className='absolute z-50 right-[10%] lg:right-[15%] bottom-[5%] lg:bottom-[15%] w-[150px] xl:w-[200px]' />
+                    <img src="./Images/Shapes/circle.png" alt="" className='absolute z-50 right-[-20%] top-[5%] w-[100px] xl:w-[150px]' />
+                    <img src="./Images/Shapes/polygon.png" alt="" className='absolute z-50 left-[10%] top-[10%] lg:top-[20%]  w-[100px] xl:w-[150px]' />
+                    <img src="./Images/Shapes/Polygonrev.png" alt="" className='absolute z-50 left-[-5%] bottom-[20%] w-[100px] xl:w-[100px]' />
+                    <img src="/Images/Shapes/circle.png" alt="" className='absolute z-50 right-[10%] lg:right-[15%] bottom-[5%] lg:bottom-[15%] w-[150px] xl:w-[200px]' />
                     <div class="overlay bg-black">
                         <div class="overlay-panel overlay-left">
                             <h1 className='text-WHITE font-Para text-4xl font-bold mb-3'>New Here?</h1>

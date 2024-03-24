@@ -1,11 +1,11 @@
 import React from 'react'
 import { WhyUs } from '../../Data/Whatyougot'
-import BgBall from "../../assets/Images/image.png"
+
 
 const Why = () => {
     return (
         <div className='relative'>
-            <img src={BgBall} alt="" className='rotate-180 absolute -z-10 top-[30%] -right-[10%] w-[250px]  md:w-[300px] lg:w-auto' />
+            <img src="./Images/image.png" alt="" className='rotate-180 absolute -z-10 top-[30%] -right-[10%] w-[250px]  md:w-[300px] lg:w-auto' />
             <div className='w-[90%] md:w-[90%] xl:w-[80%] m-auto relative'>
                 <div className="py-8 md:py-16">
                     <div className='flex flex-col gap-10'>

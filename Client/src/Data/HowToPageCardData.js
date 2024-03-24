@@ -1,39 +1,39 @@
-import img from "../assets/Logo/00.png"
+
 export const cardsData = [
     {
       title: 'Mailchimp',
       description: 'Lorem ipsum dolor sit amet consectetur. Imperdiet nisi quam hendrerit sapien. Volutpat nullam ',
-      image: img,
+      image: "./Logo/00.png",
     },
   
     {
       title: 'drip',
       description: 'Lorem ipsum dolor sit amet consectetur. Imperdiet nisi quam hendrerit sapien. Volutpat nullam ',
-      image: img,
+      image: "./Logo/00.png",
     },
   
     {
       title: 'sendin blue',
       description: 'Lorem ipsum dolor sit amet consectetur. Imperdiet nisi quam hendrerit sapien. Volutpat nullam ',
-      image: img,
+      image: "./Logo/00.png",
     },
   
     {
       title: 'drip',
       description: 'Lorem ipsum dolor sit amet consectetur. Imperdiet nisi quam hendrerit sapien. Volutpat nullam ',
-      image: img,
+      image: "./Logo/00.png",
     },
   
     {
       title: 'sendin blue',
       description: 'Lorem ipsum dolor sit amet consectetur. Imperdiet nisi quam hendrerit sapien. Volutpat nullam ',
-      image: img,
+      image: "./Logo/00.png",
     },
   
     {
       title: 'Mailchimp',
       description: 'Lorem ipsum dolor sit amet consectetur. Imperdiet nisi quam hendrerit sapien. Volutpat nullam ',
-      image: img,
+      image: "./Logo/00.png",
     },
   
     

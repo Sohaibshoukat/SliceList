@@ -5,9 +5,6 @@ import { FaCartShopping, FaBox } from "react-icons/fa6";
 import { CiCreditCard1 } from "react-icons/ci";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { FaPlusCircle, FaFont, FaRegQuestionCircle, FaTrashAlt, FaPhoneAlt } from "react-icons/fa";
-import image from '..//../assets/Logo/log.png'
-import MobileLogo from '..//../assets/Logo/06.png'
-import ImageHolder from '..//../assets/Images/DashBoard/ImageHolder.png'
 import { FiChevronDown } from 'react-icons/fi';
 import { RiShutDownLine } from "react-icons/ri";
 
@@ -74,8 +71,8 @@ const DashboardNav = () => {
 
     return (
         <div className={`flex-col bg-primary xl:h-full  px-2 pt-2 md:pt-8 w-[100%] h-[100vh] items-center shadow-md `}>
-            <img className='hidden md:block pb-10 px-6' src={image}></img>
-            <img className='md:hidden text-center m-auto w-10 h-12 pb-2' src={MobileLogo}></img>
+            <img className='hidden md:block pb-10 px-6' src="./Logo/log.png"></img>
+            <img className='md:hidden text-center m-auto w-10 h-12 pb-2' src="./Logo/06.png"></img>
             <ul className='flex flex-col gap-4 overflow-y-scroll max-h-[75vh]'>
                 {tabs.map((tab, index) => (
                     <Link key={index} to={tab.link}>
@@ -103,7 +100,7 @@ const DashboardNav = () => {
                                 `}
 
                     >
-                        <img src={ImageHolder}></img>
+                        <img src="./Images/DashBoard/ImageHolder"></img>
                         <div>
                             <div className='inline-flex items-center'>
                                 <div className='text-white '>user name</div>
