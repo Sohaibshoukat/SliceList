@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { FaChartPie, FaRegQuestionCircle, FaUserPlus } from "react-icons/fa";
+import { FaChartPie, FaRegQuestionCircle, FaRegUserCircle, FaUserPlus } from "react-icons/fa";
 import { FaBloggerB } from 'react-icons/fa6'
 import { IoCartOutline } from "react-icons/io5";
-import { IoIosListBox, IoIosPeople } from "react-icons/io";
+import { IoIosListBox, IoIosPeople, IoMdSettings } from "react-icons/io";
 import { Link, useNavigate } from 'react-router-dom';
 import { MdBlock } from "react-icons/md"
 import { LiaWpforms } from "react-icons/lia"
@@ -39,6 +39,11 @@ const Nav = () => {
             link: '/admin-dashboard/features',
         },
         {
+            name: 'testimonials',
+            Icon: IoIosPeople,
+            link: '/admin-dashboard/testimonials',
+        },
+        {
             name: "FAQ's",
             Icon: FaRegQuestionCircle,
             link: '/admin-dashboard/FAQ',
@@ -54,14 +59,14 @@ const Nav = () => {
             link: '/admin-dashboard/blogs',
         },
         {
-            name: 'Admin Profile',
-            Icon: FaBloggerB,
-            link: '/admin-dashboard/admin-profile',
+            name: 'Admin Settings',
+            Icon: IoMdSettings,
+            link: '/admin-dashboard/Settings',
         },
         {
-            name: 'testimonials',
-            Icon: IoIosPeople,
-            link: '/admin-dashboard/testimonials',
+            name: 'Admin Profile',
+            Icon: FaRegUserCircle,
+            link: '/admin-dashboard/admin-profile',
         }
     ];
 
