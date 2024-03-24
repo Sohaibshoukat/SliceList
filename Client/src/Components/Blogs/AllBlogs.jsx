@@ -15,7 +15,7 @@ const AllBlogs = () => {
         <div>
             <div className='flex lg:hidden justify-between items-center bg-white py-2 px-4 rounded-lg mb-10'
                 style={{ boxShadow: "1px 0px 24.299999237060547px 1px #00000040" }}>
-                <input type="text" placeholder='Search' className='text-xl md:text-2xl font-Para' />
+                <input type="text" placeholder='Search' className='bg-transparent bg-none text-xl md:text-2xl font-Para' />
                 <IoMdSearch className='text-3xl font-bold' />
             </div>
             <div className="flex flex-col gap-8">

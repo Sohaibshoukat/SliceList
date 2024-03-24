@@ -55,14 +55,14 @@ const Footer = () => {
                 <div className="md:basis-[33.3333%]  text-white">
                     <h2 className='text-2xl md:text-3xl font-extrabold mb-6'>Subscription</h2>
                     <div className='bg-white rounded-full py-1 pl-2 md:pl-4 pr-1 flex justify-between w-fit'>
-                        <input type="email" className='text-black w-[60%] px-2 focus-visible:outline-none placeholder:text-gray-400 border-none text-lg md:text-xl font-semibold rounded-full' placeholder='Your Email' />
+                        <input type="email" className='text-black bg-transparent w-[60%] px-2 focus-visible:outline-none placeholder:text-gray-400 border-none text-lg md:text-xl font-semibold rounded-full' placeholder='Your Email' />
                         <button className='bg-accence px-3 py-1 md:px-6 md:py-1 text-black text-lg md:text-xl font-bold rounded-full'>Send</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div className='w-[100%] text-center py-2 text-base  md:text-xl'>
+    <div className='w-[100%] text-center py-2 text-xs  md:text-sm'>
         <p className='font-Para'>© Copyright 2024 SliceList LTD . All Rights Reserved.</p>
     </div>
     </>

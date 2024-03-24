@@ -83,7 +83,7 @@ const Form = ({StateSet}) => {
                                     container.classList.remove("right-panel-active");
                                 }}
                             >
-                                Sign Up
+                                Sign In
                             </button>
                         </div>
                         <div class="overlay-panel overlay-right">
@@ -97,7 +97,7 @@ const Form = ({StateSet}) => {
                                     container.classList.add("right-panel-active");
                                 }}
                             >
-                                Sign In
+                                Sign Up
                             </button>
                         </div>
                     </div>
