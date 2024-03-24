@@ -27,7 +27,7 @@ const Form = () => {
 
 
                     <button
-                        className={`py-2 px-4  rounded-lg w-full font-para  text-xs sm:text-sm md:text-base font-bold bg-[#4DB678] text-white  `}
+                        className={`py-2 px-4  rounded-lg w-full font-para  text-xs sm:text-sm md:text-base font-bold bg-[#4DB678] text-white  hover:bg-black hover:text-accence ease-in-out duration-300 `}
                     >
                         Add a Question
                     </button>

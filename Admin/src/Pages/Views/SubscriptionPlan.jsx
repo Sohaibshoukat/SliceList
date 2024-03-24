@@ -1,16 +1,14 @@
 import React from 'react'
-
-
+import Plans from '../../Components/SubscriptionPlan/Plans';
 
 
 const SubscriptionPlan = () => {
+  
 
     return (
-        <div>
-
-            <h1>subscription Plan</h1>
-
-        </div>
+        <>
+            <Plans/>
+        </>
     );
 }
 
