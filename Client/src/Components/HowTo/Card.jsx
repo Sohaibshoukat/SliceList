@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from "../../assets/Images/mailchimp.png"
+
 
 const Card = ({ cardData }) => {
 
@@ -11,7 +11,7 @@ const Card = ({ cardData }) => {
                 <div className="flex flex-col items-center pb-2">
                     <img
                         className="w-[75px] h-[75px] mb-3 rounded-full "
-                        src={Image}
+                        src="./Images/mailchimp.png"
                         alt="Image"
                     />
                 </div>

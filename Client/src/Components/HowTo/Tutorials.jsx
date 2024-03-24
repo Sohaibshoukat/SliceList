@@ -1,15 +1,15 @@
 import React from 'react'
 import { FaPlay } from "react-icons/fa6";
 import { FaCircle } from "react-icons/fa";
-import BgBall from "../../assets/Images/image.png"
+
 
 
 const Tutorials = () => {
     return (
         <>
             <div className='relative'>
-                <img src={BgBall} alt="" className='absolute -z-10 -bottom-[50%] -left-[10%] w-[250px] md:w-[300px] lg:w-auto' />
-                <img src={BgBall} alt="" className='rotate-180 absolute -z-10 -top-[60%] -right-[10%] w-[250px]  md:w-[300px] lg:w-auto' />
+                <img src="./Images/image.png" alt="" className='absolute -z-10 -bottom-[50%] -left-[10%] w-[250px] md:w-[300px] lg:w-auto' />
+                <img src="./Images/image.png" alt="" className='rotate-180 absolute -z-10 -top-[60%] -right-[10%] w-[250px]  md:w-[300px] lg:w-auto' />
                 <div className='flex flex-row items-center justify-center py-14 md:py-24 xl:py-32 relative'>
                     <h1 className='text-primary font-head text-3xl sm:text-3xl font-extrabold md:text-6xl uppercase text-center'>BEGIN WITH TUTORIALS, THRIVE <br /> WITH OUR SUPPORT!</h1>
                 </div>

@@ -1,5 +1,3 @@
-import MainImage from "../assets/Images/Howto.png"
-import step from "../assets/Images/step1.jpg"
 
 export const HowitData=[
     {
@@ -9,7 +7,7 @@ export const HowitData=[
     },
     {
         Type:"Image",
-        Image:MainImage,
+        Image:"./Images/Howto.png",
         note:"Displays first frame of animated GIF only."
     },
     {
@@ -24,12 +22,12 @@ export const HowitData=[
             {
                 head:"Set the Form",
                 des:"Feed in the date, time and time zone when the timer must end.",
-                image:step
+                image:"./Images/step1.jpg"
             },
             {
                 head:"Set the Form",
                 des:"Feed in the date, time and time zone when the timer must end.",
-                image:step
+                image:"./Images/step1.jpg"
             },
             {
                 head:"Set the Form",

@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from "../assets/Logo/log.png"
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 FaInstagram
@@ -33,7 +32,7 @@ const Footer = () => {
         <div className="md:w-[95%] m-auto">
             <div className="flex flex-col xl:flex-row justify-between gap-10 lg:gap-20">
                 <div className='basis-[33.3333%]'>
-                    <img src={logo} alt="" className='w-[200px] md:w-[250px] h-auto mb-5 md:mb-10' />
+                    <img src="./Logo/log.png" alt="" className='w-[200px] md:w-[250px] h-auto mb-5 md:mb-10' />
                     <p className='text-white text-base md:text-lg font-light max-w-[90%] text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam numquam quia, alias iure ex omnis, quasi libero animi corporis in amet voluptas odit inventore quos officiis quo quod suscipit doloremque. Laborum commodi maxime fugiat?</p>
                 </div>
                 <div className="basis-[33.333%] text-white flex flex-col md:flex-row xl:flex-col gap-x-20">
