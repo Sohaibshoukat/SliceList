@@ -1,5 +1,4 @@
 import React from 'react'
-import BgBall from "../../assets/Images/image.png"
 import Accordion from '../Accordion'
 import "./style.css"
 
@@ -12,7 +11,7 @@ const FAQ = () => {
                     <h1 className='text-primary font-head text-3xl md:text-4xl lg:text-5xl font-bold text-center'>Frequently asked questions</h1>
                 </div>
                 <div className='flex flex-col lg:flex-row justify-between md:py-20 gap-8 relative'>
-                    <img src={BgBall} alt="" className='absolute -z-10  -right-[20%] top-0 bottom-0 w-[250px] md:w-[300px] lg:w-auto rotate-180' />
+                    <img src="./Images/image.png" alt="" className='absolute -z-10  -right-[20%] top-0 bottom-0 w-[250px] md:w-[300px] lg:w-auto rotate-180' />
                     <div className="lg:basis-[55%]">
                         <Accordion />
                     </div>

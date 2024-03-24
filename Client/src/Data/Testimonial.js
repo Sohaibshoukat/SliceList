@@ -1,4 +1,4 @@
-import Image1 from "../assets/Images/review.png"
+
 
 export    const TestimonalData = [
     {
@@ -8,7 +8,7 @@ export    const TestimonalData = [
         position: "Founder",
         company:"Company",
         rating: "5",
-        image: Image1
+        image: "./Images/review.png"
     },
     {
         name: "William Kollas",
@@ -17,7 +17,7 @@ export    const TestimonalData = [
         position: "Founder",
         company:"Company",
         rating: "5",
-        image: Image1
+        image: "./Images/review.png"
     },
     {
         name: "William Kollas",
@@ -26,7 +26,7 @@ export    const TestimonalData = [
         position: "Founder",
         company:"Company",
         rating: "5",
-        image: Image1
+        image: "./Images/review.png"
     },
     {
         name: "William Kollas",
@@ -35,6 +35,6 @@ export    const TestimonalData = [
         position: "Founder",
         company:"Company",
         rating: "5",
-        image: Image1
+        image: "./Images/review.png"
     }
 ]

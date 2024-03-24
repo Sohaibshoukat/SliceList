@@ -1,13 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { FaCirclePlay } from "react-icons/fa6"
-import BgBall from "../../assets/Images/image.png"
-import BannerImage from "../../assets/Images/Banner.png"
-import BannerBall from "../../assets/Images/BGBall.png"
-import Bannerbg from '../../assets/Images/Banner/BG.png'
-import Bannermobile from '../../assets/Images/Banner/Mobile.png'
-import m1red from '../../assets/Images/Banner/m1.png'
-import m2blue from '../../assets/Images/Banner/m2.png'
-import m3green from '../../assets/Images/Banner/m3.png'
 import '../../App.css'
 
 const Banner = () => {
@@ -53,11 +45,12 @@ const Banner = () => {
 
                 </div>
                 <div className='relative w-[300px] xs:w-[350px] sm:w-[400px] md:w-1/2 m-auto'>
-                    <img src={Bannermobile} alt="" />
-                    <img src={m1red} alt="" className='absolute w-[26%]  left-14 top-16 sm:left-20 sm:top-20 md:left-28 md:top-24 lg:left-28 lg:top-32 floatanimation' />
-                    <img src={m2blue} alt=""  className='absolute w-[46%] bottom-3 left-9 sm:bottom-3 sm:left-9 md:bottom-3 md:left-9 lg:bottom-3 lg:left-9 floatanimation'/>
-                    <img src={m3green} alt="" className='absolute w-[30%] bottom-24 right-12 sm:bottom-32 sm:right-12 md:bottom-36 md:right-7 lg:bottom-52 lg:right-20 floatanimation' />
+                    <img src="./Images/Banner/Mobile.png" alt="" />
+                    <img src="./Images/Banner/m1.png" alt="" className='absolute w-[26%]  left-14 top-16 sm:left-20 sm:top-20 md:left-28 md:top-24 lg:left-28 lg:top-32 floatanimation' />
+                    <img src="./Images/Banner/m2.png" alt=""  className='absolute w-[46%] bottom-3 left-9 sm:bottom-3 sm:left-9 md:bottom-3 md:left-9 lg:bottom-3 lg:left-9 floatanimation'/>
+                    <img src="./Images/Banner/m3.png" alt="" className='absolute w-[30%] bottom-24 right-12 sm:bottom-32 sm:right-12 md:bottom-36 md:right-7 lg:bottom-52 lg:right-20 floatanimation' />
                 </div>
+
 
             </div>
            

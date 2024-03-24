@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import logo from "../assets/Logo/log.png"
 import { NavMenu } from '../Data/Navigation'
 import { Link } from 'react-router-dom'
 import { FaUserCircle } from "react-icons/fa";
@@ -19,7 +18,7 @@ const Nav = () => {
                             setDisplay(false)
                         }, 50);
                     }}>
-                        <img src={logo} alt="" className='w-[150px] md:w-[200px] h-[auto]' />
+                        <img src="./Logo/log.png" alt="" className='w-[150px] md:w-[200px] h-[auto]' />
                     </Link>
                 </div>
                 <div className={`${display && 'hidden'} hidden xl:flex gap-4 basis-[50%] justify-center`}>
@@ -56,7 +55,7 @@ const Nav = () => {
                     <div className="flex flex-col h-[100%]">
                         <div className='mb-20'>
                             <Link to={"/"} onClick={() => { setMobileMenu(false) }}>
-                                <img src={logo} alt="" className='w-[150px] md:w-[200px] h-[auto]' />
+                                <img src="./Logo/log.png" alt="" className='w-[150px] md:w-[200px] h-[auto]' />
                             </Link>
                         </div>
                         <div className='flex flex-col h-[100%] justify-between mb-4'>
