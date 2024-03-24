@@ -59,7 +59,7 @@ const EditForm = ({title,setTitle,description,name,rating}) => {
           <input
             type="text"
             placeholder={name}
-            className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-darkgray hover:text-gray-500  hover:border-[#ADFC32] hover:text-white duration-300 ease-in-out`}
+            className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-darkgray hover:text-gray-500  hover:border-[#ADFC32] duration-300 ease-in-out`}
           />
         </div>
 

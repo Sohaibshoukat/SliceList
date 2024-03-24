@@ -19,7 +19,7 @@ const AdminDashboard = () => {
 
     return (
         // overflow-hidden
-        <div className='flex flex-row h-[100vh] '>
+        <div className='flex flex-row h-[100vh] overflow-hidden '>
 
             {/* SideBar */}
             <div className='md:basis-[45%] xl:basis-[20%]'>
