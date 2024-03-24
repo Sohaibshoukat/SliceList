@@ -38,7 +38,7 @@ const Accordion = () => {
                             </div>
                             {currenttab !== index ? <FaPlus className='text-xs md:text-base' /> : <FaMinus className='text-xs md:text-base' />}
                         </div>
-                        <div className={`${currenttab !== index ? 'hidden' : 'block'} text-xs sm:text-sm md:text-lg font-Para text-white text-justify font-normal lg:pt-2 xl:pt-4 px-2 md:px-4 ease-in-out duration-300`}>
+                        <div className={`${currenttab !== index ? 'hidden' : 'block'} text-xs sm:text-sm md:text-lg font-Para text-white text-justify font-normal pt-2 xl:pt-4 px-2 md:px-4 ease-in-out duration-300`}>
                             {currenttab === index && <p>
                                 {item.Answer}
                             </p>}
