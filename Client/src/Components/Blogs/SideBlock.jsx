@@ -7,7 +7,7 @@ const SideBlock = () => {
         <div className='flex flex-col gap-10'>
             <div className='lg:flex hidden justify-between items-center bg-white py-2 px-4 rounded-lg '
                 style={{ boxShadow: "1px 0px 24.299999237060547px 1px #00000040" }}>
-                <input type="text" placeholder='Search' className='text-2xl font-Para' />
+                <input type="text" placeholder='Search' className='bg-transparent outline-none active:outline-none text-2xl font-Para' />
                 <IoMdSearch className='text-3xl font-bold'/>
             </div>
             <div

@@ -11,15 +11,16 @@ import FAQ from './Views/FAQ';
 import UploadForm from './Views/UploadForm';
 import Blogs from './Views/Blogs';
 import Testimonials from './Views/Testimonials';
-import EditTestimonials from './Views/EditTestimonials';
+import EditTestimonials from './Views/CreateTestimonials';
 import AdminProfile from './Views/AdminProfile';
+import Setting from './Views/Settings';
 
 
 const AdminDashboard = () => {
 
     return (
         // overflow-hidden
-        <div className='flex flex-row h-[100vh] '>
+        <div className='flex flex-row h-[100vh] overflow-hidden '>
 
             {/* SideBar */}
             <div className='md:basis-[45%] xl:basis-[20%]'>
@@ -38,7 +39,7 @@ const AdminDashboard = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className='pb-20 overflow-scroll h-[100%]'>
                     {/* Routes Here */}
                     <Routes>
                         <Route
@@ -72,6 +73,10 @@ const AdminDashboard = () => {
                         <Route
                             path='/blogs'
                             element={<Blogs />}
+                        />
+                        <Route
+                            path='/Settings'
+                            element={<Setting />}
                         />
                         <Route
                             path='/admin-profile'
