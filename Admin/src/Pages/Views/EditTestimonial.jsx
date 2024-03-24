@@ -1,8 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import EditForm from '../../Components/Testimonials/EditForm';
 import PreviewTestimonial from '../../Components/Testimonials/PreviewTestimonial';
+import { useLocation } from 'react-router-dom';
+import { TestimonalData } from '../../Data/Testimonial';
 
-const CreateTestimonials = () => {
+const EditTestimonial = () => {
+
+  const { state } = useLocation();
+  const { id } = state;
+
+const [Selecteditem, setSelecteditem] = useState(null)
+
   const [title, setTitle] = useState("");
   const [Name, setName] = useState('');
   const [description, setdescription] = useState('')
@@ -10,6 +18,22 @@ const CreateTestimonials = () => {
   const [position, setposition] = useState('');
   const [rating, setrating] = useState('')
   const [Image, setImage] = useState('')
+
+  useEffect(() => {
+    TestimonalData.map((item,index)=>{
+      if(index==id){
+        setTitle(item.heading)
+        setName(item.name)
+        setCompany(item.company)
+        setposition(item.position)
+        setrating(item.rating)
+        setImage(item.image)
+        setdescription(item.desc)
+      }
+    })
+  
+  }, [])
+  
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -63,4 +87,4 @@ const CreateTestimonials = () => {
   )
 }
 
-export default CreateTestimonials;
+export default EditTestimonial;

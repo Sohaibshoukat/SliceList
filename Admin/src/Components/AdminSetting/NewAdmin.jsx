@@ -43,9 +43,9 @@ const NewAdmin = () => {
 
                     </div>
 
-                    <div className='flex flex-row justify-end my-5 mx-16'>
+                    <div className='flex flex-row justify-center sm:justify-end my-5  mx-6 sm:mx-16'>
                         <button
-                            className={`py-3 px-6   rounded-full font-para  text-base font-bold bg-[#4D8AB6] text-white  `}
+                            className={`py-1 px-2 sm:py-3 sm:px-6  rounded-full font-para  text-base font-bold bg-[#4D8AB6] text-white hover:bg-black hover:text-accence ease-in-out duration-300 `}
                         >
                             Make Admin
                         </button>

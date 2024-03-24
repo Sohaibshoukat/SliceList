@@ -2,10 +2,26 @@ import React from 'react';
 import { CiCirclePlus } from "react-icons/ci";
 import Rating from '@mui/material/Rating';
 
-const EditForm = ({title,setTitle,description,name,rating}) => {
+const EditForm = ({
+  title,
+  setTitle,
+  Name,
+  setName,
+  description,
+  setdescription,
+  Company,
+  setCompany,
+  position,
+  setposition,
+  rating,
+  setrating,
+  handleImageChange,
+  Image,
+  setImage
+}) => {
   return (
-    <div className="container mx-auto p-4 text-[#4F4F4F]">
-      <h2 className="text-xl font-bold mb-4 ">TESTIMONIALS</h2>
+    <div className="container mx-auto p-2 md:p-4 text-black">
+      <h2 className="text-2xl md:text-3xl lg:text-5xl tracking-wider font-bold font-head mb-4 ">TESTIMONIALS</h2>
       <form>
         <div className="mb-2">
           <label htmlFor="title" className="text-lg font-bold text-[#8A8A8A] ">
@@ -13,9 +29,9 @@ const EditForm = ({title,setTitle,description,name,rating}) => {
           </label>
           <input
             type="text"
-            value = {title}
-            onChange={(e)=>{setTitle(e.target.value)}}
-            className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-darkgray hover:text-gray-500 hover:border-[#ADFC32]  duration-300 ease-in-out`}
+            value={title}
+            onChange={(e) => { setTitle(e.target.value) }}
+            className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-black  hover:border-[#ADFC32]  duration-300 ease-in-out`}
           />
         </div>
 
@@ -25,8 +41,9 @@ const EditForm = ({title,setTitle,description,name,rating}) => {
           </label>
           <input
             type="text"
-            placeholder={description}
-            className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-darkgray hover:text-gray-500 hover:border-[#ADFC32]  duration-300 ease-in-out`}
+            value={description}
+            onChange={(e) => { setdescription(e.target.value) }}
+            className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-black hover:border-[#ADFC32]  duration-300 ease-in-out`}
           />
         </div>
 
@@ -39,11 +56,11 @@ const EditForm = ({title,setTitle,description,name,rating}) => {
               type="file"
               id="profile-image"
               className="hidden"
-              onChange={(e) => console.log(e.target.files)}
+              onChange={handleImageChange}
             />
             <label
               htmlFor="profile-image"
-              className=" flex items-center justify-center py-3 px-4 rounded-lg w-full font-para text-base md:text-lg border border-darkgray hover:border-[#ADFC32] text-darkgray hover:text-gray-500 duration-300 ease-in-out cursor-pointer"
+              className=" flex items-center justify-center py-3 px-4 rounded-lg w-full font-para text-base md:text-lg border border-darkgray hover:border-[#ADFC32] text-black duration-300 ease-in-out cursor-pointer"
             >
               <CiCirclePlus className='mx-2 text-lg' />
               Import From Computer
@@ -58,8 +75,33 @@ const EditForm = ({title,setTitle,description,name,rating}) => {
           </label>
           <input
             type="text"
-            placeholder={name}
-            className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-darkgray hover:text-gray-500  hover:border-[#ADFC32] duration-300 ease-in-out`}
+            value={Name}
+            onChange={(e) => { setName(e.target.value) }}
+            className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-black  hover:border-[#ADFC32]  duration-300 ease-in-out`}
+          />
+        </div>
+
+        <div className="mb-2">
+          <label htmlFor="name" className="text-lg font-bold text-[#8A8A8A] ">
+            Comapny:
+          </label>
+          <input
+            type="text"
+            value={Company}
+            onChange={(e) => { setCompany(e.target.value) }}
+            className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-black  hover:border-[#ADFC32]  duration-300 ease-in-out`}
+          />
+        </div>
+
+        <div className="mb-2">
+          <label htmlFor="name" className="text-lg font-bold text-[#8A8A8A] ">
+            Position:
+          </label>
+          <input
+            type="text"
+            value={position}
+            onChange={(e) => { setposition(e.target.value) }}
+            className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-black  hover:border-[#ADFC32]  duration-300 ease-in-out`}
           />
         </div>
 
@@ -68,20 +110,21 @@ const EditForm = ({title,setTitle,description,name,rating}) => {
           <label htmlFor="rating" className="text-lg font-bold text-[#8A8A8A] ">
             Rating:
           </label>
-         
+
           <div className="flex items-center justify-center text-darkgray">
-             <Rating
-                    name="edit"
-                    className='my-5'
-                    value = {rating}
-                    sx={{
-                        '& .MuiRating-iconFilled': {
-                            color: '#ADFC32', // Custom color 
-                        }
-                    }}
-                />
-                </div>
-          
+            <Rating
+              name="edit"
+              className='my-5'
+              value={rating}
+              onChange={(e) => { setrating(e.target.value) }}
+              sx={{
+                '& .MuiRating-iconFilled': {
+                  color: '#ADFC32', // Custom color 
+                }
+              }}
+            />
+          </div>
+
         </div>
 
 

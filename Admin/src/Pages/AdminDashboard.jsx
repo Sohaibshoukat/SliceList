@@ -11,9 +11,10 @@ import FAQ from './Views/FAQ';
 import UploadForm from './Views/UploadForm';
 import Blogs from './Views/Blogs';
 import Testimonials from './Views/Testimonials';
-import EditTestimonials from './Views/CreateTestimonials';
 import AdminProfile from './Views/AdminProfile';
 import Setting from './Views/Settings';
+import EditTestimonial from './Views/EditTestimonial';
+import CreateTestimonials from './Views/CreateTestimonials';
 
 
 const AdminDashboard = () => {
@@ -29,7 +30,7 @@ const AdminDashboard = () => {
 
 
 
-            <div className='font-poppins w-full'>
+            <div className='font-poppins w-full overflow-scroll'>
                 <div className='flex flex-row text-custom-black justify-between items-center shadow-md sm:p-5 p-2 '>
                     <h1 className='lg:text-3xl md:text-2xl sm:text-xl font-bold'>Dashboard</h1>
                     <div className='flex flex-row items-center px-2 md:px-5'>
@@ -88,7 +89,11 @@ const AdminDashboard = () => {
                         />
                         <Route
                             path='/edit-testimonial'
-                            element={<EditTestimonials />}
+                            element={<EditTestimonial />}
+                        />
+                        <Route
+                            path='/create-testimonial'
+                            element={<CreateTestimonials />}
                         />
                     </Routes>
                 </div>
