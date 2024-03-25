@@ -1,24 +1,13 @@
 import React from 'react'
 import { FiChevronDown } from 'react-icons/fi';
+import BlockUserData from '../../Components/Users/BlockUser';
 
 const BlockUser = () => {
   return (
-    <div className='flex lg:p-4 p-2 justify-center'>
-
-      <div className='shadow-md flex p-2 m-2 rounded-md w-[80%]'>
-
-        <div className='inline-flex text-darkgray items-center gap-10'>
-          <p>Add Filter</p>
-          <FiChevronDown/>
-        </div>
-
-        <div className='inline-flex bg-[#FCFAFA] px-2'>
-        <input type='text' placeholder='Search by name or email' className='w-full'>
-        </input>
-        </div>
+    <div className='bg-gray-100/50 w-100% min-h-[100vh]'>
+      <div className="w-[95%] lg:w-[95%] m-auto py-10">
+        <BlockUserData/>
       </div>
-
-      
     </div>
   )
 }

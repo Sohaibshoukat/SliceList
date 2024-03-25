@@ -40,7 +40,7 @@ const AdminDashboard = () => {
                     </div>
                 </div>
 
-                <div className='pb-20 overflow-scroll h-[100%]'>
+                <div className='pb-20 overflow-y-scroll overflow-x-hidden h-[100%]'>
                     {/* Routes Here */}
                     <Routes>
                         <Route
