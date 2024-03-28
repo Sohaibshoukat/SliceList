@@ -3,11 +3,12 @@ import { IoSearch } from 'react-icons/io5'
 import { UserDataList } from '../../Data/UserData'
 
 const UserData = ({ selectedItem, setselectedItem }) => {
+
     return (
         <>
-            <div className="flex flex-col gap-4">
-                <div className='flex flex-row gap-10 font-Para bg-white rounded-xl text-lg shadow-2xl'>
-                    <select name="" id="" className='basis-[15%] active:outline-none rounded-xl py-4 px-6'>
+            <div className="flex flex-col gap-2 md:gap-4">
+                <div className='flex flex-row gap-2 md:gap-4 lg:gap-10 font-Para bg-white rounded-xl text-sm md:text-lg shadow-2xl'>
+                    <select name="" id="" className='w-[40%] md:w-auto md:basis-[5%] lg:basis-[15%] active:outline-none rounded-xl py-4 px-2 lg:px-6'>
                         <option value="">Add Filter</option>
                         <option value="Basic">Basic Plan</option>
                         <option value="Advance">Advance Plan</option>
@@ -19,39 +20,43 @@ const UserData = ({ selectedItem, setselectedItem }) => {
                     </div>
                 </div>
 
-                <div className="my-4 w-[100%] font-Para">
-                    <table className='w-[100%]'>
-                        {/* <thead> */}
-                        <tr>
-                            <th>Name</th>
-                            <th>ID</th>
-                            <th>Amount</th>
-                            <th>Plan</th>
-                            <th>Gender</th>
-                            <th>Lifetime Spent</th>
-                            <th>Action</th>
-                        </tr>
-                        {/* </thead> */}
-                        {/* <tbody className='flex flex-col gap-4'> */}
-                        {UserDataList.map((item, index) => (
-                            <tr key={index}>
-                                <td className='gap-2'>
-                                    <img src={'../assets/user.png'} alt="" className='w-[25px] h-[25px] rounded-lg' />
-                                    <h3>{item.Name}</h3>
-                                </td>
-                                <td>{item.ID}</td>
-                                <td>$200</td>
-                                <td>{item.Plan}</td>
-                                <td>{item.Gender}</td>
-                                <td>{item['Lifetime Spent']}</td>
-                                <td>
-                                    <button>
-                                        Block
-                                    </button>
-                                </td>
+                <div className="my-2 md:my-4 w-[100%] overflow-x-scroll font-Para">
+                    <table className='styled-table text-sm md:text-base'>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>ID</th>
+                                <th>Amount</th>
+                                <th>Plan</th>
+                                <th>Gender</th>
+                                <th>Lifetime Spent</th>
+                                <th>Action</th>
                             </tr>
-                        ))}
-                        {/* </tbody> */}
+                        </thead>
+                        <tbody className=''>
+                            {UserDataList.map((item, index) => (
+                                <tr
+                                    key={index}
+                                    className={`p-10 hover:bg-black hover:text-white ease-in-out duration-300 ${selectedItem == index && "active-row"}`}
+                                    onClick={() => { setselectedItem(index) }}
+                                >
+                                    <td className='flex gap-2'>
+                                        <img src={'../assets/user.png'} alt="" className='w-[25px] h-[25px] rounded-lg' />
+                                        <h3>{item.Name}</h3>
+                                    </td>
+                                    <td>{item.ID}</td>
+                                    <td>$200</td>
+                                    <td>{item.Plan}</td>
+                                    <td>{item.Gender}</td>
+                                    <td>{item['Lifetime Spent']}</td>
+                                    <td>
+                                        <button className='bg-red-400 rounded-lg py-2 px-4 text-white font-semibold'>
+                                            Block
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
                     </table>
                 </div>
 

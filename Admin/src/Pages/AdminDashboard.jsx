@@ -15,6 +15,10 @@ import AdminProfile from './Views/AdminProfile';
 import Setting from './Views/Settings';
 import EditTestimonial from './Views/EditTestimonial';
 import CreateTestimonials from './Views/CreateTestimonials';
+import EditBlog from './Views/CreateBlog';
+import CreateBlog from './Views/CreateBlog';
+import IntegrationGuides from './Views/IntegrationGuides';
+import CreateIntegrationGuides from './Views/CreateIntegrationGuides';
 
 
 const AdminDashboard = () => {
@@ -40,7 +44,7 @@ const AdminDashboard = () => {
                     </div>
                 </div>
 
-                <div className='pb-20 overflow-scroll h-[100%]'>
+                <div className='pb-20 overflow-y-scroll overflow-x-hidden h-[100%]'>
                     {/* Routes Here */}
                     <Routes>
                         <Route
@@ -74,6 +78,18 @@ const AdminDashboard = () => {
                         <Route
                             path='/blogs'
                             element={<Blogs />}
+                        />
+                        <Route
+                            path='/integration-guides'
+                            element={<IntegrationGuides/>}
+                        />
+                        <Route
+                            path='/create-integration-guides'
+                            element={<CreateIntegrationGuides/>}
+                        />
+                        <Route
+                            path='/create-blogs'
+                            element={<CreateBlog/>}
                         />
                         <Route
                             path='/Settings'
