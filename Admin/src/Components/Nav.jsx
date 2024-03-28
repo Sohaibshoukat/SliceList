@@ -59,6 +59,11 @@ const Nav = () => {
             link: '/admin-dashboard/blogs',
         },
         {
+            name: 'Integration Guides',
+            Icon: FaBloggerB,
+            link: '/admin-dashboard/integration-guides',
+        },
+        {
             name: 'Admin Settings',
             Icon: IoMdSettings,
             link: '/admin-dashboard/Settings',
