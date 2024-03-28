@@ -15,6 +15,10 @@ import AdminProfile from './Views/AdminProfile';
 import Setting from './Views/Settings';
 import EditTestimonial from './Views/EditTestimonial';
 import CreateTestimonials from './Views/CreateTestimonials';
+import EditBlog from './Views/CreateBlog';
+import CreateBlog from './Views/CreateBlog';
+import IntegrationGuides from './Views/IntegrationGuides';
+import CreateIntegrationGuides from './Views/CreateIntegrationGuides';
 
 
 const AdminDashboard = () => {
@@ -74,6 +78,18 @@ const AdminDashboard = () => {
                         <Route
                             path='/blogs'
                             element={<Blogs />}
+                        />
+                        <Route
+                            path='/integration-guides'
+                            element={<IntegrationGuides/>}
+                        />
+                        <Route
+                            path='/create-integration-guides'
+                            element={<CreateIntegrationGuides/>}
+                        />
+                        <Route
+                            path='/create-blogs'
+                            element={<CreateBlog/>}
                         />
                         <Route
                             path='/Settings'
