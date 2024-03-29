@@ -15,10 +15,11 @@ import AdminProfile from './Views/AdminProfile';
 import Setting from './Views/Settings';
 import EditTestimonial from './Views/EditTestimonial';
 import CreateTestimonials from './Views/CreateTestimonials';
-import EditBlog from './Views/CreateBlog';
+import EditBlog from './Views/EditBlog';
 import CreateBlog from './Views/CreateBlog';
 import IntegrationGuides from './Views/IntegrationGuides';
 import CreateIntegrationGuides from './Views/CreateIntegrationGuides';
+import EditIntegrationGuides from './Views/EditIntegrationGuides';
 
 
 const AdminDashboard = () => {
@@ -80,24 +81,33 @@ const AdminDashboard = () => {
                             element={<Blogs />}
                         />
                         <Route
+                            path='/create-blogs'
+                            element={<CreateBlog />}
+                        />
+                        <Route
+                            path='/edit-blogs'
+                            element={<EditBlog />}
+                        />
+                        <Route
                             path='/integration-guides'
-                            element={<IntegrationGuides/>}
+                            element={<IntegrationGuides />}
                         />
                         <Route
                             path='/create-integration-guides'
-                            element={<CreateIntegrationGuides/>}
+                            element={<CreateIntegrationGuides />}
                         />
                         <Route
-                            path='/create-blogs'
-                            element={<CreateBlog/>}
+                            path='/edit-integration-guides'
+                            element={<EditIntegrationGuides />}
                         />
+
                         <Route
                             path='/Settings'
                             element={<Setting />}
                         />
                         <Route
                             path='/admin-profile'
-                            element={<AdminProfile/>}
+                            element={<AdminProfile />}
                         />
                         <Route
                             path='/testimonials'

@@ -3,18 +3,18 @@ import { CiCirclePlus } from "react-icons/ci";
 import Rating from '@mui/material/Rating';
 
 const EditForm = ({
-  title,
+  Title,
   setTitle,
-
-  description,
-  setdescription,
+  FormTitle,
+  Description,
+  setDescription,
 
   handleImageChange,
 
 }) => {
   return (
     <div className="container mx-auto p-2 md:p-4 text-black">
-      <h2 className="text-2xl md:text-3xl lg:text-5xl tracking-wider font-bold font-head mb-4 ">Create Form Design</h2>
+      <h2 className="text-2xl md:text-3xl lg:text-5xl tracking-wider font-bold font-head mb-4 ">{FormTitle}</h2>
       <form>
         <div className="mb-2">
           <label htmlFor="title" className="text-lg font-bold text-[#8A8A8A] ">
@@ -22,7 +22,7 @@ const EditForm = ({
           </label>
           <input
             type="text"
-            value={title}
+            value={Title}
             onChange={(e) => { setTitle(e.target.value) }}
             className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-black  hover:border-[#ADFC32]  duration-300 ease-in-out`}
           />
@@ -35,8 +35,8 @@ const EditForm = ({
           <input
             type="text"
             placeholder='Enter Your Blog Description'
-            value={description}
-            onChange={(e) => { setdescription(e.target.value) }}
+            value={Description}
+            onChange={(e) => { setDescription(e.target.value) }}
             className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-black hover:border-[#ADFC32]  duration-300 ease-in-out`}
           />
         </div>

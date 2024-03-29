@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Blog = ({ title, date, image }) => {
+const Blog = ({ title, date, image, IDSelected, IDindex }) => {
   return (
 
     <div
-      className="bg-white flex lg:flex-row flex-col w-[100%] p-4 mx-auto mt-2 mb-6 lg:items-center hover:scale-95 rounded-md ease-in-out duration-300"
+      className={`bg-white flex lg:flex-row flex-col w-[100%] p-2 md:p-4 mx-auto mt-2 mb-6 lg:items-center hover:scale-95 rounded-md ease-in-out duration-300 ${IDSelected === IDindex && "border-4 border-black "} `}
       style={{
         boxShadow: '1px 0px 27.299999237060547px -3px rgba(0, 0, 0, 0.4)',
         transition: 'box-shadow 0.3s ease-in-out',

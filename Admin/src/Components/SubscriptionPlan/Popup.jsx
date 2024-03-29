@@ -52,7 +52,7 @@ const Popup = ({ handleclose, sethandleclose }) => {
                             </div>
                             <div className=' flex flex-col  gap-1'>
                                 <h2 className=' text-sm sm:text-base font-Heading font-semibold'>Features</h2>
-                                <div className=' border-2 p-2 rounded-md w-full grid grid-cols-4 items-center justify-center gap-x-2 gap-y-1' style={{ maxHeight: '130px', overflowY: 'auto' }}>
+                                <div className=' border-2 p-2 rounded-md w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-x-2 gap-y-1' style={{ maxHeight: '130px', overflowY: 'auto' }}>
                                     {FeaturesData.map((item, index) => (
                                         <>
                                                 <ul >

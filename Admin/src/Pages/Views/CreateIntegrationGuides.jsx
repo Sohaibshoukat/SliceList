@@ -1,30 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import EditForm from '../../Components/IntegrationGuide/EditForm'
 import PreviewCard from '../../Components/IntegrationGuide/PreviewCard';
-import { useLocation } from 'react-router-dom';
-import { TestimonalData } from '../../Data/Testimonial';
+
 
 
 const CreateIntegrationGuides = () => {
 
-    const { state } = useLocation();
-    const id = state ? state.id : null;
-
-
     const [title, setTitle] = useState("");
-    const [description, setdescription] = useState('')
+    const [Description, setDescription] = useState('')
     const [Image, setImage] = useState('')
 
-    useEffect(() => {
-        TestimonalData.map((item, index) => {
-            if (index == id) {
-                setTitle(item.heading)
-                setImage(item.image)
-                setdescription(item.desc)
-            }
-        })
-
-    }, [])
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
@@ -35,10 +20,11 @@ const CreateIntegrationGuides = () => {
     return (
         <div className='flex flex-col lg:py-5 lg:px-6 p-2 lg:flex-row m-5 md:m-10 rounded-2xl shadow-boxshade'>
     <EditForm
+      FormTitle="Create Form Design"
       title={title}
       setTitle={setTitle}
-      description={description}
-      setdescription={setdescription}
+      Description={Description}
+      setDescription={setDescription}
       handleImageChange={handleImageChange}
     />
 
@@ -51,7 +37,7 @@ const CreateIntegrationGuides = () => {
         </button>
       </div>
       <PreviewCard
-        content={description}
+        content={Description}
         title={title}
         Image={Image}
       />

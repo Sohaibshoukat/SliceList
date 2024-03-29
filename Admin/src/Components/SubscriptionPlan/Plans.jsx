@@ -69,7 +69,7 @@ const Plans = () => {
                     <button
                         className={`py-2 px-4  rounded-lg w-full font-para text-xs sm:text-sm md:text-base font-bold bg-black text-white hover:bg-[#ADFC32] hover:text-black ease-in-out duration-300 `} onClick={() => { setQuestionBTN(!QuestionBTN) }}
                     >
-                        + Add a Question
+                        + Add New Plan
                     </button>
                     <Popup handleclose={QuestionBTN} sethandleclose={setQuestionBTN} />
                     <EditPopup  handleclose={Edit} sethandleclose={setEdit} id={Id}/>
