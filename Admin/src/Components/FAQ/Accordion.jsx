@@ -2,8 +2,20 @@ import React, { useState } from 'react'
 import { HiQuestionMarkCircle } from "react-icons/hi";
 import { FaMinus, FaPlus } from 'react-icons/fa';
 import { FAQData } from '../../Data/FAQdata'
+import { MdEditNote } from "react-icons/md";
 
-const Accordion = () => {
+const Accordion = (
+    {
+        Question,
+        setQuestion,
+        Answer,
+        setAnswer,
+        setEditBTN,
+        EditBTN,
+        TabSelection,
+        setTabSelection
+    }
+) => {
 
 
     const [currenttab, setcurrenttab] = useState(null)
@@ -21,6 +33,9 @@ const Accordion = () => {
           `}
                         style={{ boxShadow: "1px 1px 7.800000190734863px 0px #00000040" }}
                         key={index}
+                        onClick={()=>{
+                            setTabSelection(index)
+                        }}
                     >
                         <div
                             className={`text-left flex flex-row  justify-between items-center text-base md:text-xl xl:text-2xl font-semibold `}
@@ -36,7 +51,10 @@ const Accordion = () => {
                                 <HiQuestionMarkCircle />
                                 <h2 className='font-Para text-xs sm:text-sm md:text-lg font-semibold'>{item.Question}</h2>
                             </div>
-                            {currenttab !== index ? <FaPlus className='text-xs md:text-base' /> : <FaMinus className='text-xs md:text-base' />}
+                            <div className='flex flex-row items-center justify-center gap-3'>
+                                <MdEditNote onClick={()=>{setEditBTN(true)}}/>
+                                {currenttab !== index ? <FaPlus className='text-xs md:text-base' /> : <FaMinus className='text-xs md:text-base' />}
+                            </div>
                         </div>
                         <div className={`${currenttab !== index ? 'hidden' : 'block'} text-xs sm:text-sm md:text-lg font-Para text-white text-justify font-normal pt-2 xl:pt-4 px-2 md:px-4 ease-in-out duration-300`}>
                             {currenttab === index && <p>
