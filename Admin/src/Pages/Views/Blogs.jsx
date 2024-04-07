@@ -16,7 +16,7 @@ const Blogs = () => {
   return (
     <div className='flex flex-col-reverse xl:flex-row lg:py-10 p-2 m-5 md:m-10 rounded-2xl shadow-boxshade '>
 
-      <div className='lg:w-[80%] mx-4 overflow-y-auto lg:px-4 px-2'>
+      <div className='lg:w-[80%] overflow-y-auto lg:px-4 px-2'>
         {BlogData.map((blog, index) => (
           <div onClick={() => {
             setSelected(true)

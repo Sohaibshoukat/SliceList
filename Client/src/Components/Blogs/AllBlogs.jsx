@@ -23,10 +23,14 @@ const AllBlogs = () => {
                     <BlogsMainCard item={item} des={true} key={index} />
                 ))}
             </div>
-            <div className='flex flex-row justify-center my-6 gap-4'>
+            <div className='flex flex-row justify-center my-6'>
                 {PageData.map((item,index)=>(
                     <div 
-                        className={`${Page==index?'bg-black  text-white':"bg-transparent"} border-2 border-black py-1 px-2 md:py-2 md:px-4 text-xl md:text-2xl font-Para cursor-pointer ease-in-out duration-300`}
+                        className={`
+                            ${Page==index?'bg-black  text-white':"bg-transparent"} border-2 border-black py-1 px-2 
+                            md:py-2 md:px-4 text-xl md:text-xl font-Para  cursor-pointer ease-in-out duration-300 
+                            ${item=='Next' &&'rounded-tr-xl rounded-br-xl'} ${index==0 &&'rounded-tl-xl rounded-bl-xl'}
+                        `} 
                         onClick={()=>{setPage(index)}}
                     >
                             {item}

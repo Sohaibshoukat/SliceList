@@ -22,7 +22,7 @@ const SideBlock = () => {
             >
                 <h2 className='font-Para text-3xl font-bold'>Contact Us</h2>
                 <p className='font-Para text-lg font-normal mb-6'>We are here to help you! Tell us how we can help and we’ll get in touch within next 24hrs</p>
-                <button className='py-3 w-[100%] border-2 text-2xl font-bold border-white font-Para rounded-xl'>Contact us</button>
+                <button className='py-3 w-[100%] border-2 text-2xl font-bold border-white hover:bg-white hover:text-black font-Para rounded-xl ease-in-out duration-300'>Contact us</button>
             </div>
         </div>
     )

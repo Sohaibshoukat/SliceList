@@ -1,6 +1,7 @@
 import React from 'react';
 import { CiCirclePlus } from "react-icons/ci";
 import Rating from '@mui/material/Rating';
+import { useNavigate } from 'react-router-dom';
 
 const EditForm = ({
     Title,
@@ -13,6 +14,9 @@ const EditForm = ({
     FormHeading
 
   }) => {
+
+    const navigate = useNavigate()
+
   return  (
     <div className="container mx-auto p-2 md:p-4 text-black">
       <h2 className="text-2xl md:text-3xl lg:text-5xl tracking-wider font-bold font-head mb-4 ">{FormHeading}</h2>
@@ -68,6 +72,7 @@ const EditForm = ({
         <div className='mt-8 flex-col '>
           <div className='flex justify-center'>
             <button
+              onClick={()=>{navigate('/admin-dashboard/blogs-Detail')}}
               className={`w-full md:w-auto py-3 px-10 md:rounded-3xl mb-4 text-base md:text-xl bg-[#285F86] hover:bg-[#30546c] text-white duration-300 ease-in-out`}
             >
               Next
