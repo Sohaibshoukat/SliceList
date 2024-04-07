@@ -1,20 +1,28 @@
 import React, { useEffect, useState } from 'react'
-import EditForm from '../../Components/Blog/EditForm'
-import PreviewBlog from '../../Components/Blog/PreviewBlog';
+import EditForm from '../../Components/FormDesign/EditForm'
+import PreviewForm from '../../Components/FormDesign/PreviewForm';
 import { useLocation } from 'react-router-dom';
-import { TestimonalData } from '../../Data/Testimonial';
+import {FormDesignData} from '../../Data/FormDesignData'
 
+const EditFormDesign = () => {
 
-const CreateBlog = () => {
-
+  
   const { state } = useLocation();
-  const id = state ? state.id : null;
+  const {id} = state ;
 
 
   const [Title, setTitle] = useState(null);
   const [Image, setImage] = useState(null)
-  const [Date, setDate] = useState(null)
+  const [Category, setCategory] = useState(null)
 
+  useEffect(() => {
+    FormDesignData.map((item, index) => {
+      if (index == id) {
+        setImage(item.image)
+      }
+    })
+
+  }, [])
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -24,14 +32,15 @@ const CreateBlog = () => {
 
 
   return (
+    <>
     <div className='flex flex-col lg:py-5 lg:px-6 p-2 lg:flex-row m-5 md:m-10 rounded-2xl shadow-boxshade'>
       <EditForm
         Title={Title}
         setTitle={setTitle}
-        Date={Date}
-        setDate={setDate}
+        Category={Category}
+        setCategory={setCategory}
         handleImageChange={handleImageChange}
-        FormHeading="Create Form Design"
+        FormHeading = "Edit Form Design"
       />
 
       <div className='flex-col md:basis-[80%]'>
@@ -42,15 +51,15 @@ const CreateBlog = () => {
             Preview
           </button>
         </div>
-        <PreviewBlog
+        <PreviewForm
           Title={Title}
-          Date={Date}
           Image={Image}
+          Category={Category}
         />
       </div>
     </div>
-
+  </>
   )
 }
 
-export default CreateBlog
+export default EditFormDesign

@@ -3,18 +3,19 @@ import { CiCirclePlus } from "react-icons/ci";
 import Rating from '@mui/material/Rating';
 
 const EditForm = ({
-  Title,
-  setTitle,
-  FormTitle,
-  Description,
-  setDescription,
+    Title,
+    setTitle,
+ 
+    Category,
+    setCategory,
 
-  handleImageChange,
+    handleImageChange,
+    FormHeading
 
-}) => {
-  return (
+  }) => {
+  return  (
     <div className="container mx-auto p-2 md:p-4 text-black">
-      <h2 className="text-2xl md:text-3xl lg:text-5xl tracking-wider font-bold font-head mb-4 ">{FormTitle}</h2>
+      <h2 className="text-2xl md:text-3xl lg:text-5xl tracking-wider font-bold font-head mb-4 ">{FormHeading}</h2>
       <form>
         <div className="mb-2">
           <label htmlFor="title" className="text-lg font-bold text-[#8A8A8A] ">
@@ -30,20 +31,20 @@ const EditForm = ({
 
         <div className="mb-2">
           <label htmlFor="description" className="text-lg font-bold text-[#8A8A8A] ">
-            Meta Description:
+            Category:
           </label>
           <input
             type="text"
-            placeholder='Enter Your Blog Description'
-            value={Description}
-            onChange={(e) => { setDescription(e.target.value) }}
+            placeholder='Category'
+            value={Category}
+            onChange={(e) => { setCategory(e.target.value) }}
             className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-black hover:border-[#ADFC32]  duration-300 ease-in-out`}
           />
         </div>
 
         <div className="mb-2">
           <label htmlFor="profile-image" className="text-lg font-bold text-[#8A8A8A]">
-            Image:
+            Upload File For Design:
           </label>
           <div className="flex items-center mt-4">
             <input
@@ -67,9 +68,9 @@ const EditForm = ({
         <div className='mt-8 flex-col '>
           <div className='flex justify-center'>
             <button
-              className={`w-full md:w-auto py-3 px-10 md:rounded-3xl mb-4 text-base md:text-xl bg-[#285F86] hover:bg-[#30546c] text-white duration-300 ease-in-out`}
+              className={`w-full md:w-auto py-3 px-10 md:rounded-3xl mb-4 text-base md:text-xl bg-[#4DB678] hover:bg-[#2d6f49] text-white duration-300 ease-in-out`}
             >
-              Next
+              Create
             </button>
           </div>
         </div>

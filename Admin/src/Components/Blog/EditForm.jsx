@@ -4,18 +4,22 @@ import Rating from '@mui/material/Rating';
 import { useNavigate } from 'react-router-dom';
 
 const EditForm = ({
-    title,
+    Title,
     setTitle,
-    description,
-    setdescription,
+ 
+    Date,
+    setDate,
+
     handleImageChange,
+    FormHeading
+
   }) => {
 
     const navigate = useNavigate()
 
   return  (
     <div className="container mx-auto p-2 md:p-4 text-black">
-      <h2 className="text-2xl md:text-3xl lg:text-5xl tracking-wider font-bold font-head mb-4 ">Create Form Design</h2>
+      <h2 className="text-2xl md:text-3xl lg:text-5xl tracking-wider font-bold font-head mb-4 ">{FormHeading}</h2>
       <form>
         <div className="mb-2">
           <label htmlFor="title" className="text-lg font-bold text-[#8A8A8A] ">
@@ -23,8 +27,8 @@ const EditForm = ({
           </label>
           <input
             type="date"
-            value={title}
-            onChange={(e) => { setTitle(e.target.value) }}
+            value={Date}
+            onChange={(e) => { setDate(e.target.value) }}
             className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-black  hover:border-[#ADFC32]  duration-300 ease-in-out`}
           />
         </div>
@@ -36,8 +40,8 @@ const EditForm = ({
           <input
             type="text"
             placeholder='Enter Your Blog Description'
-            value={description}
-            onChange={(e) => { setdescription(e.target.value) }}
+            value={Title}
+            onChange={(e) => { setTitle(e.target.value) }}
             className={`py-3 px-4 rounded-lg w-full font-para mt-4 text-base md:text-xl border border-darkgray  text-black hover:border-[#ADFC32]  duration-300 ease-in-out`}
           />
         </div>
