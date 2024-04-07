@@ -19,6 +19,7 @@ import EditBlog from './Views/CreateBlog';
 import CreateBlog from './Views/CreateBlog';
 import IntegrationGuides from './Views/IntegrationGuides';
 import CreateIntegrationGuides from './Views/CreateIntegrationGuides';
+import AddBlogDetail from './Views/AddBlogDetail';
 
 
 const AdminDashboard = () => {
@@ -90,6 +91,10 @@ const AdminDashboard = () => {
                         <Route
                             path='/create-blogs'
                             element={<CreateBlog/>}
+                        />
+                        <Route
+                            path='/blogs-Detail'
+                            element={<AddBlogDetail/>}
                         />
                         <Route
                             path='/Settings'
