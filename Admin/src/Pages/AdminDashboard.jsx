@@ -20,6 +20,9 @@ import CreateBlog from './Views/CreateBlog';
 import IntegrationGuides from './Views/IntegrationGuides';
 import CreateIntegrationGuides from './Views/CreateIntegrationGuides';
 import EditIntegrationGuides from './Views/EditIntegrationGuides';
+import FormDesign from './Views/FormDesign';
+import CreateFormDesign from './Views/CreateFormDesign';
+import EditFormDesign from './Views/EditFormDesign';
 
 
 const AdminDashboard = () => {
@@ -74,7 +77,15 @@ const AdminDashboard = () => {
                         />
                         <Route
                             path='/form-design'
-                            element={<UploadForm />}
+                            element={<FormDesign/>}
+                        />
+                        <Route
+                            path='/create-form-design'
+                            element={<CreateFormDesign/>}
+                        />
+                        <Route
+                            path='/edit-form-design'
+                            element={<EditFormDesign/>}
                         />
                         <Route
                             path='/blogs'
