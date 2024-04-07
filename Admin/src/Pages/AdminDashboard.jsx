@@ -15,10 +15,14 @@ import AdminProfile from './Views/AdminProfile';
 import Setting from './Views/Settings';
 import EditTestimonial from './Views/EditTestimonial';
 import CreateTestimonials from './Views/CreateTestimonials';
-import EditBlog from './Views/CreateBlog';
+import EditBlog from './Views/EditBlog';
 import CreateBlog from './Views/CreateBlog';
 import IntegrationGuides from './Views/IntegrationGuides';
 import CreateIntegrationGuides from './Views/CreateIntegrationGuides';
+import EditIntegrationGuides from './Views/EditIntegrationGuides';
+import FormDesign from './Views/FormDesign';
+import CreateFormDesign from './Views/CreateFormDesign';
+import EditFormDesign from './Views/EditFormDesign';
 
 
 const AdminDashboard = () => {
@@ -73,31 +77,48 @@ const AdminDashboard = () => {
                         />
                         <Route
                             path='/form-design'
-                            element={<UploadForm />}
+                            element={<FormDesign/>}
+                        />
+                        <Route
+                            path='/create-form-design'
+                            element={<CreateFormDesign/>}
+                        />
+                        <Route
+                            path='/edit-form-design'
+                            element={<EditFormDesign/>}
                         />
                         <Route
                             path='/blogs'
                             element={<Blogs />}
                         />
                         <Route
+                            path='/create-blogs'
+                            element={<CreateBlog />}
+                        />
+                        <Route
+                            path='/edit-blogs'
+                            element={<EditBlog />}
+                        />
+                        <Route
                             path='/integration-guides'
-                            element={<IntegrationGuides/>}
+                            element={<IntegrationGuides />}
                         />
                         <Route
                             path='/create-integration-guides'
-                            element={<CreateIntegrationGuides/>}
+                            element={<CreateIntegrationGuides />}
                         />
                         <Route
-                            path='/create-blogs'
-                            element={<CreateBlog/>}
+                            path='/edit-integration-guides'
+                            element={<EditIntegrationGuides />}
                         />
+
                         <Route
                             path='/Settings'
                             element={<Setting />}
                         />
                         <Route
                             path='/admin-profile'
-                            element={<AdminProfile/>}
+                            element={<AdminProfile />}
                         />
                         <Route
                             path='/testimonials'
