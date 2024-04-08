@@ -1,24 +1,73 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FAQData } from '../../Data/FAQdata';
+import AlertContext from '../../Context/Alert/AlertContext';
+import { BaseURL } from '../../Data/BaseURL';
 
 const EditForm = ({
-    Question,
-    setQuestion,
-    Answer,
-    setAnswer,
-    TabSelection,
-    setTabSelection,
-    setEditBTN
+    setEditBTN,
+    EditBTN,
+    editID,
+    fetchFAQs,
+    seteditID,
 }) => {
 
-    useEffect(() => {
-        FAQData.map((item, index) => {
-            if (index === TabSelection) {
-                setQuestion(item.Question);
-                setAnswer(item.Answer);
+    const alertcontext = useContext(AlertContext);
+    const { showAlert } = alertcontext
+
+    const [question, setQuestion] = useState('');
+    const [answer, setAnswer] = useState('');
+
+    const fetchFAQ = async (editID) => {
+        try {
+            const response = await fetch(`${BaseURL}/getFAQ/${editID}`, {
+                headers: {
+                    "AdminODSToken": sessionStorage.getItem('AdminODSToken')
+                }
+            });
+            const data = await response.json();
+            if (!data.success) {
+                showAlert(data.message, 'danger');
             }
-        });
-    }, [TabSelection, setQuestion, setAnswer]);
+            setQuestion(data.faq.Question);
+            setAnswer(data.faq.Answer);
+        } catch (error) {
+            showAlert(error.message, 'danger');
+            // Handle error
+        }
+    };
+  
+    useEffect(() => {
+        if(EditBTN){
+            fetchFAQ(editID);
+        }
+    }, [EditBTN,editID]);
+
+    const handleAddQuestion = async () => {
+        try {
+            const response = await fetch(`${BaseURL}/updateFAQ/${editID}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    "AdminODSToken": sessionStorage.getItem('AdminODSToken')
+                },
+                body: JSON.stringify({ Question: question, Answer: answer })
+            });
+            const data = await response.json();
+            if (response.ok) {
+                // Handle success
+                fetchFAQs()
+                showAlert('FAQ created successfully','success');
+                setQuestion('')
+                setAnswer('')
+                setEditBTN(false)
+            } else {
+                // Handle error
+                showAlert(data.message, 'danger');
+            }
+        } catch (error) {
+            showAlert(error.message, 'danger');
+        }
+    };
 
     return (
         <>
@@ -33,17 +82,17 @@ const EditForm = ({
                     <div className='flex flex-col md:flex-row justify-between mb-7 md:mb-4 gap-2 md:gap-16'>
                         <div className='flex flex-col w-full gap-2'>
                             <h2 className='font-Para text-xs sm:text-sm md:text-base text-black font-semibold'>Question:</h2>
-                            <input type="text" name="" id="" className='border-2 rounded-md p-1' value={Question} onChange={(e) => { setQuestion(e.target.value) }} />
+                            <input type="text" name="" id="" className='border-2 rounded-md p-1' value={question} onChange={(e) => { setQuestion(e.target.value) }} />
                         </div>
                         <div className='flex flex-col w-full gap-2'>
                             <h2 className='font-Para text-xs sm:text-sm md:text-base text-black font-semibold'>Answer:</h2>
-                            <input type="text" name="" id="" className='border-2 rounded-md p-1' value={Answer} onChange={(e) => { setAnswer(e.target.value) }} />
+                            <input type="text" name="" id="" className='border-2 rounded-md p-1' value={answer} onChange={(e) => { setAnswer(e.target.value) }} />
                         </div>
                     </div>
 
                     <button
                         className={`py-2 px-4 rounded-lg w-full font-para text-xs sm:text-sm md:text-base font-bold bg-[#4DB678] text-white hover:bg-black hover:text-accence ease-in-out duration-300`}
-                        onClick={()=>{setEditBTN(false)}}
+                        onClick={handleAddQuestion}
                     >
                         Edit Question
                     </button>

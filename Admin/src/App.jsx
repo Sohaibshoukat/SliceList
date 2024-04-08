@@ -6,6 +6,8 @@ import Redirect from './Pages/Redirect'
 import Login from './Pages/Login'
 import ForgotPassword from './Pages/ForgotPassword'
 import ForgotPassword2 from './Pages/ForgotPassword2'
+import Alert from './Components/Alert'
+import AlertState from './Context/Alert/AlertState'
 
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
+      <AlertState>
+        <Alert />
         <Routes>
           <Route path="/" element={<Redirect />} />
           <Route path="/login" element={<Login />} />
@@ -21,6 +25,7 @@ function App() {
           <Route path="/updatePassword" element={<ForgotPassword2 />} />
           <Route path="/admin-dashboard/*" element={<AdminDashboard />}></Route>
         </Routes>
+        </AlertState>
       </BrowserRouter>
     </>
   )

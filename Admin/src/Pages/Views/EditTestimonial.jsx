@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import EditForm from '../../Components/Testimonials/EditForm';
 import PreviewTestimonial from '../../Components/Testimonials/PreviewTestimonial';
 import { useLocation } from 'react-router-dom';
-import { TestimonalData } from '../../Data/Testimonial';
+import { useNavigate } from 'react-router-dom'
+import AlertContext from '../../Context/Alert/AlertContext';
+import { BaseURL } from '../../Data/BaseURL';
 
 const EditTestimonial = () => {
 
   const { state } = useLocation();
   const { id } = state;
-
-const [Selecteditem, setSelecteditem] = useState(null)
 
   const [title, setTitle] = useState("");
   const [Name, setName] = useState('');
@@ -18,27 +18,79 @@ const [Selecteditem, setSelecteditem] = useState(null)
   const [position, setposition] = useState('');
   const [rating, setrating] = useState('')
   const [Image, setImage] = useState('')
+  const [ImageSet, setImageSet] = useState(null)
+  const [Profile, setProfile] = useState(null)
+
+  const navigate = useNavigate()
+
+  const alertcontext = useContext(AlertContext);
+  const { showAlert } = alertcontext
+
+  const fetchTestimonial = async () => {
+    try {
+      console.log('srubge vnd')
+        const response = await fetch(`${BaseURL}/getTestimonial/${id}`, {
+            headers: {
+                "AdminODSToken": sessionStorage.getItem('AdminODSToken')
+            }
+        });
+        const data = await response.json();
+        if (!data.success) {
+            showAlert(data.message, 'danger');
+        }
+        setTitle(data.testimonial.Title)
+        setName(data.testimonial.Name)
+        setCompany(data.testimonial.Company)
+        setposition(data.testimonial.Position)
+        setrating(data.testimonial.Rating)
+        setImage(data.testimonial.Profile)
+        setProfile(data.testimonial.Profile)
+        setdescription(data.testimonial.Description)
+    } catch (error) {
+        showAlert(error.message, 'danger');
+    }
+};
 
   useEffect(() => {
-    TestimonalData.map((item,index)=>{
-      if(index==id){
-        setTitle(item.heading)
-        setName(item.name)
-        setCompany(item.company)
-        setposition(item.position)
-        setrating(item.rating)
-        setImage(item.image)
-        setdescription(item.desc)
-      }
-    })
-  
+    fetchTestimonial()
   }, [])
-  
+
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
-    // You can process the file here (e.g., upload to a server or display preview)
+    setImageSet(file)
     setImage(URL.createObjectURL(file));
+  };
+
+  const handleEditSubmit = async () => {
+    try {
+      const formData = new FormData();
+      formData.append('Title', title);
+      formData.append('Rating', rating);
+      formData.append('Name', Name);
+      formData.append('Company', Company);
+      formData.append('Position', position);
+      formData.append('Description', description);
+      formData.append('testiomnialimg', ImageSet);
+      formData.append('Profile',Profile)
+
+      const response = await fetch(`${BaseURL}/updateTestimonial/${id}`, {
+        method: 'PUT',
+        headers:{
+          "AdminODSToken": sessionStorage.getItem('AdminODSToken')
+        },
+        body: formData
+      });
+      const data = await response.json();
+      if (response.ok) {
+        navigate('/admin-dashboard/testimonials')
+        showAlert('Testimonial Edited successfully','success');
+      } else {
+        showAlert(data.message,'danger');
+      }
+    } catch (error) {
+      showAlert(error.message,'danger');
+    }
   };
 
   return (
@@ -62,6 +114,8 @@ const [Selecteditem, setSelecteditem] = useState(null)
         Image={Image}
         setImage={setImage}
         handleImageChange={handleImageChange}
+        status={'Edit'}
+        handleEditSubmit={handleEditSubmit}
       />
 
       <div className='flex-col md:basis-[80%]'>

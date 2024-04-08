@@ -6,7 +6,7 @@ const Redirect = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (sessionStorage.getItem('token')) {
+        if (sessionStorage.getItem('AdminODSToken')) {
                 navigate('/AdminDashboard')
         } else {
             navigate('/Login')

@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import EditForm from '../../Components/Testimonials/EditForm';
 import PreviewTestimonial from '../../Components/Testimonials/PreviewTestimonial';
+import { BaseURL } from '../../Data/BaseURL';
+import AlertContext from '../../Context/Alert/AlertContext';
+import { useNavigate } from 'react-router-dom'
 
 const CreateTestimonials = () => {
   const [title, setTitle] = useState("");
@@ -10,12 +13,50 @@ const CreateTestimonials = () => {
   const [position, setposition] = useState('');
   const [rating, setrating] = useState('')
   const [Image, setImage] = useState('')
+  const [ImageSet, setImageSet] = useState(null)
+
+  const alertcontext = useContext(AlertContext);
+  const { showAlert } = alertcontext
+
+  const navigate = useNavigate()
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
-    // You can process the file here (e.g., upload to a server or display preview)
+    setImageSet(file)
     setImage(URL.createObjectURL(file));
   };
+
+  const handleSubmit = async () => {
+    try {
+      const formData = new FormData();
+      formData.append('Title', title);
+      formData.append('Rating', rating);
+      formData.append('Name', Name);
+      formData.append('Company', Company);
+      formData.append('Position', position);
+      formData.append('Description', description);
+      formData.append('testiomnialimg', ImageSet);
+
+      const response = await fetch(`${BaseURL}/createTestimonial`, {
+        method: 'POST',
+        headers: {
+          "AdminODSToken": sessionStorage.getItem('AdminODSToken')
+        },
+        body: formData
+      });
+      const data = await response.json();
+      if (response.ok) {
+        navigate('/admin-dashboard/testimonials')
+        showAlert('Testimonial created successfully', 'success');
+      } else {
+        // Handle error
+        showAlert(data.message, 'danger');
+      }
+    } catch (error) {
+      showAlert(error.message, 'danger');
+    }
+  };
+
 
   return (
 
@@ -38,6 +79,7 @@ const CreateTestimonials = () => {
         Image={Image}
         setImage={setImage}
         handleImageChange={handleImageChange}
+        handleSubmit={handleSubmit}
       />
 
       <div className='flex-col md:basis-[80%]'>

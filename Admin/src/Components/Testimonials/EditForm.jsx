@@ -7,6 +7,7 @@ const EditForm = ({
   setTitle,
   Name,
   setName,
+  handleSubmit,
   description,
   setdescription,
   Company,
@@ -16,13 +17,14 @@ const EditForm = ({
   rating,
   setrating,
   handleImageChange,
+  status,
+  handleEditSubmit,
   Image,
   setImage
 }) => {
   return (
     <div className="container mx-auto p-2 md:p-4 text-black">
       <h2 className="text-2xl md:text-3xl lg:text-5xl tracking-wider font-bold font-head mb-4 ">TESTIMONIALS</h2>
-      <form>
         <div className="mb-2">
           <label htmlFor="title" className="text-lg font-bold text-[#8A8A8A] ">
             Title:
@@ -132,12 +134,18 @@ const EditForm = ({
           <div className='flex justify-center'>
             <button
               className={`w-full md:w-auto py-3 px-10 md:rounded-3xl mb-4 text-base md:text-xl bg-[#4DB678] hover:bg-[#419e5d] text-white duration-300 ease-in-out`}
+              onClick={()=>{
+                if(status=='Edit'){
+                  handleEditSubmit()
+                }else{
+                  handleSubmit()
+                }
+              }}
             >
               Submit
             </button>
           </div>
         </div>
-      </form>
     </div>
   );
 };

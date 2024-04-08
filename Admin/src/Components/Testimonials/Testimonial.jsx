@@ -20,6 +20,7 @@ const Testimonial = ({
         <div className={` ${id == SelectedId && 'border-4 border-black'} p-2 md:py-6 md:px-10 w-[100%] mx-auto cursor-pointer bg-white rounded-xl shadow-md flex-col items-center hover:shadow-xl hover:shadow-gray-500 ease-in-out duration-300 `}>
             <div className="flex justify-between items-center">
                 <div>
+                    {console.log(rating)}
                     <Rating
                         name="read-only"
                         value={rating}

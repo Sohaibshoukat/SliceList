@@ -104,6 +104,7 @@ const Nav = () => {
                                     group  ease-in-out duration-300 hover:bg-black hover:rounded-2xl hover:text-white     
                                 `}
                         onClick={()=>{
+                            sessionStorage.removeItem('AdminODSToken')
                             navigate('/login')
                         }}
                     >

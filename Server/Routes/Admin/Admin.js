@@ -17,12 +17,12 @@ const multer = require("multer");
 const multerS3 = require("multer-s3");
 
 const s3 = new aws.S3({
-    accessKeyId: "AKIAVRUVSUXUEPIU5DE2",
-    secretAccessKey: "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",
-    region: "us-west-2",
+    accessKeyId: process.env.AWS_ACCESS_KEY,
+    secretAccessKey: process.env.AWS_SECRET_KEY,
+    region: process.env.AWS_REION,
 });
 
-const uploadTestimonial = (bucketName,folderName) =>
+const uploadTestimonial = (bucketName, folderName) =>
     multer({
         storage: multerS3({
             s3,
@@ -54,7 +54,7 @@ const PhotosUploader = multer({ storage: PhotosStorage });
 
 
 //Create a admin 
-router.post("/createAdmin", fetchadmin, async (req, res) => {
+router.post("/createAdmin", async (req, res) => {
     let success = false;
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -63,10 +63,10 @@ router.post("/createAdmin", fetchadmin, async (req, res) => {
 
     try {
 
-        let admin = await Admin.findById(req.admin.id);
-        if (!admin) {
-            return res.status(404).json({ success: false, message: "You Have no Access" });
-        }
+        // let admin = await Admin.findById(req.admin.id);
+        // if (!admin) {
+        //     return res.status(404).json({ success: false, message: "You Have no Access" });
+        // }
 
         admin = await Admin.findOne({ Email: req.body.Email })
         if (admin) {
@@ -168,7 +168,7 @@ router.put("/UpdateAdmin",
             console.error(error);
             res.status(500).json({ success: false, message: 'Error occurred' });
         }
-});
+    });
 
 
 // Create a FAQ
@@ -201,7 +201,7 @@ router.post("/createFAQ", fetchadmin, async (req, res) => {
 });
 
 // Get all FAQs
-router.get("/getFAQs", async (req, res) => {
+router.get("/getFAQs", fetchadmin, async (req, res) => {
     try {
         let admin = await Admin.findById(req.admin.id);
         if (!admin) {
@@ -209,6 +209,22 @@ router.get("/getFAQs", async (req, res) => {
         }
         const faqs = await FAQ.find();
         res.json({ success: true, faqs });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Error occurred' });
+    }
+});
+
+// Get all FAQs
+router.get("/getFAQ/:id", fetchadmin, async (req, res) => {
+    try {
+        const id = req.params.id;
+        let admin = await Admin.findById(req.admin.id);
+        if (!admin) {
+            return res.status(404).json({ success: false, message: "You Have no Access" });
+        }
+        const faq = await FAQ.findById(id);
+        res.json({ success: true, faq });
     } catch (error) {
         console.error(error);
         res.status(500).json({ success: false, message: 'Error occurred' });
@@ -265,11 +281,18 @@ router.delete("/deleteFAQ/:id", fetchadmin, async (req, res) => {
 });
 
 
-router.post("/createTestimonial", uploadTestimonial("slicelist-admin","Testimonial").single("testiomnialimg"), async (req, res) => {
+router.post("/createTestimonial", fetchadmin, uploadTestimonial("slicelist-admin", "Testimonial").single("testiomnialimg"), async (req, res) => {
     try {
+
+
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(400).json({ success: false, errors: errors.array() });
+        }
+
+        let admin = await Admin.findById(req.admin.id);
+        if (!admin) {
+            return res.status(404).json({ success: false, message: "You Have no Access" });
         }
 
         // Now you can access req.body and req.file
@@ -299,7 +322,7 @@ router.post("/createTestimonial", uploadTestimonial("slicelist-admin","Testimoni
 });
 
 // Get all Testimonials
-router.get("/getTestimonials", async (req, res) => {
+router.get("/getTestimonials", fetchadmin, async (req, res) => {
     try {
         let admin = await Admin.findById(req.admin.id);
         if (!admin) {
@@ -313,20 +336,37 @@ router.get("/getTestimonials", async (req, res) => {
     }
 });
 
+// Get Testimonial
+router.get("/getTestimonial/:id", fetchadmin, async (req, res) => {
+    try {
+        let id = req.params.id
+        let admin = await Admin.findById(req.admin.id);
+        if (!admin) {
+            return res.status(404).json({ success: false, message: "You Have no Access" });
+        }
+        const testimonial = await Testimonial.findById(id);
+        res.json({ success: true, testimonial });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Error occurred' });
+    }
+});
+
 // Update a Testimonial
-router.put("/updateTestimonial/:id", fetchadmin, async (req, res) => {
+router.put("/updateTestimonial/:id", fetchadmin, uploadTestimonial("slicelist-admin", "Testimonial").single("testiomnialimg"), async (req, res) => {
     try {
         let admin = await Admin.findById(req.admin.id);
         if (!admin) {
             return res.status(404).json({ success: false, message: "You Have no Access" });
         }
 
-        const { Title, Rating, Profile, Name, Company, Position, Description } = req.body;
+        const { Title, Rating, Name, Company, Position, Description } = req.body;
+        const profile = req.file ? req.file.location : req.body.Profile;
 
         const updatedTestimonial = {
             Title,
             Rating,
-            Profile,
+            Profile: profile,
             Name,
             Company,
             Position,
@@ -345,6 +385,7 @@ router.put("/updateTestimonial/:id", fetchadmin, async (req, res) => {
         res.status(500).json({ success: false, message: 'Error occurred' });
     }
 });
+
 
 // Delete a Testimonial
 router.delete("/deleteTestimonial/:id", fetchadmin, async (req, res) => {

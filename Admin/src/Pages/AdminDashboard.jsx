@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from '../Components/Nav'
 import { FiChevronDown } from 'react-icons/fi';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import SubscriptionPlan from './Views/SubscriptionPlan';
 import Home from './Views/Home';
 import UserAnalysis from './Views/UserAnalysis';
@@ -27,6 +27,15 @@ import EditFormDesign from './Views/EditFormDesign';
 
 
 const AdminDashboard = () => {
+    const navigate = useNavigate()
+    useEffect(() => {
+        if (sessionStorage.getItem('AdminODSToken')) {
+            return;
+        } else {
+            navigate('/Login')
+        }
+    }, [])
+
 
     return (
         // overflow-hidden
@@ -78,15 +87,15 @@ const AdminDashboard = () => {
                         />
                         <Route
                             path='/form-design'
-                            element={<FormDesign/>}
+                            element={<FormDesign />}
                         />
                         <Route
                             path='/create-form-design'
-                            element={<CreateFormDesign/>}
+                            element={<CreateFormDesign />}
                         />
                         <Route
                             path='/edit-form-design'
-                            element={<EditFormDesign/>}
+                            element={<EditFormDesign />}
                         />
                         <Route
                             path='/blogs'
@@ -115,7 +124,7 @@ const AdminDashboard = () => {
 
                         <Route
                             path='/blogs-Detail'
-                            element={<AddBlogDetail/>}
+                            element={<AddBlogDetail />}
                         />
                         <Route
                             path='/Settings'
